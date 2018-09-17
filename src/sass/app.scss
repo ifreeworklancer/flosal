@@ -1,0 +1,33 @@
+@import "config/variables";
+@import "config/placeholders";
+
+@import "~bootstrap/scss/bootstrap";
+@import "~animate.css/animate.min.css";
+
+@import "base/body";
+@import "base/section";
+@import "base/btn";
+
+@import "modules/menu";
+@import "modules/section-description";
+@import "modules/more-info";
+@import "modules/forms";
+@import "modules/pagination";
+@import "modules/promotional-products";
+@import "modules/breadcrumbs";
+@import "modules/filters";
+@import "modules/scrollbar";
+@import "modules/modal-mask";
+
+@import "layout/app-header";
+@import "layout/header-banner";
+@import "layout/nav-brand";
+@import "layout/catalog";
+@import "layout/social-initiative";
+@import "layout/news";
+@import "layout/ability";
+@import "layout/about";
+@import "layout/partners";
+@import "layout/app-footer";
+
+@import "layout/catalog-page";

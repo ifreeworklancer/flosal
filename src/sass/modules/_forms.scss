@@ -1,0 +1,159 @@
+.search {
+    position: relative;
+    left: 0;
+    padding-left: 15px;
+    max-width: 600px;
+    width: 33.33333%;
+    height: 100px;
+    transition: .5s;
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+        width: 100%;
+        padding-left: 50px;
+    }
+
+    &.active {
+        z-index: 999;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            position: absolute;
+            left: 100px;
+            width: 100%;
+            background-color: #fff;
+
+            #search-form {
+                width: 70%;
+            }
+        }
+        
+
+        .form-control {
+            color: $dark;
+
+            &::-webkit-input-placeholder {
+                color: $dark;
+            }
+            &::-moz-placeholder {
+                color: $dark;
+            }
+        }
+
+        .search-btn {
+
+            svg {
+                fill: $dark;
+            }
+        }
+
+        &::before {
+            right: 0;
+        }
+    }    
+    #search-form {
+        width: 90%;
+    }
+
+    .form-control {
+        padding-left: 40px;
+        font-size: 14px;
+        font-weight: 300;
+        color: #fff;
+        background: transparent;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            padding-left: 20px;
+        }
+
+        &::-webkit-input-placeholder {
+            color: #fff;
+            transition: .5s;
+        }
+        &::-moz-placeholder {
+            color: #fff;
+            transition: .5s;
+        }
+    }
+
+    .search-btn {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        z-index: 99;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            left: 20px;
+        }
+
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+            left: 50px;
+        }
+
+        svg {
+            fill: #fff;
+            transition: .5s;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background-color: rgba(#fff,.4);
+        transition: .8s;
+    }   
+}
+
+#form-feedback {
+
+    .form-group {
+        width: 100%;
+        max-width: 470px;
+
+        &.in-focus {
+
+            .label-placeholder {
+                font-size: 14px;
+                color: $primary;
+                bottom: 80%;
+            }
+
+            &::before {
+                width: 100%;
+                background-color: $primary;
+            }
+        }
+
+        .label-placeholder {
+            font-size: 18px;
+            color: #6e6e6e;
+            left: 0;
+            bottom: 0;
+            transition: .5s;
+        }
+
+        .form-control {
+            display: block;
+            background: transparent;
+            padding-left: 10px;
+            font-size: 18px;
+            color: $dark;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 1px;
+            background-color: #6e6e6e;
+            transition: .5s;
+        }
+    }
+}

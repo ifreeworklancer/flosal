@@ -1,0 +1,25 @@
+#social-initiative {
+    padding: 50px 0 70px;
+    @extend %img;
+
+    .section-description {
+        margin-top: 170px;
+        max-width: 700px;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            margin-top: 100px;
+        }
+
+        @media(min-width: 1500px) {
+            left: -120px;
+        }
+
+        .btn {
+            right: 140px;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                right: 10%;
+            }
+        }
+    }
+}

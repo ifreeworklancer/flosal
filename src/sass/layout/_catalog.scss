@@ -1,0 +1,277 @@
+#catalog {
+    margin-top: -14px;
+
+    .catalog-slider-nav-arrow {
+        bottom: 60px;
+        z-index: 999;
+
+
+        &-left {
+            cursor: pointer;
+            
+            svg {
+                opacity: .5;
+                transition: .5s;
+            }
+
+            &:hover {
+
+                svg {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-right {
+            @extend .catalog-slider-nav-arrow-left;
+        }
+
+        
+        &--cosmetics {
+            left: 165px;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                top: 550px;
+                bottom: auto;
+            }
+
+            .catalog-slider-nav-arrow-left {
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+
+        &--drugs {
+            right: 165px;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                right: 100px;
+                top: 470px;
+                bottom: auto;
+            }
+
+            .catalog-slider-nav-arrow-left {
+
+                svg {
+                    fill: #000;
+                }
+            }
+        }
+    }
+}
+
+.catalog-slider {
+
+    .flickity-page-dots {
+        bottom: 63px;
+        width: auto;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            top: 555px;
+            bottom: auto;
+        }
+
+        li {
+            background: transparent;
+            border-radius: 0;
+            transition: .5s;
+            
+            &.is-selected {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &-item {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &--cosmetics {
+
+        .flickity-page-dots {
+            left: 300px;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                left: 30px;
+            }
+    
+            li {
+                border: 1px solid #fff;
+                
+                &.is-selected {
+                    background-color: #fff;
+                }
+            }
+        }
+    
+    }
+
+    &--drugs {
+
+        .flickity-page-dots {
+            right: 300px;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                left: 30px;
+                right: auto;
+                top: 475px;
+                bottom: auto;
+            }
+    
+            li {
+                border: 1px solid #000;
+                
+                &.is-selected {
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}
+
+.catalog-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    @extend %img;
+    transition: .5s;
+
+    .section-description {
+        margin-bottom: 120px;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__promotional {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        padding: 10px 30px;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+        background: $primary;
+        transition: .5s;
+    }
+
+    &__old-price {
+        font-size: 18px;
+        color: #808080;
+        margin-bottom: -35px;
+    }
+
+    
+    &__new-price {
+        font-size: 22px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    &-description {
+        margin-bottom: 50px;
+    }
+
+    &__img {
+        @extend %pos;
+        @extend %img;
+        transition: .5s;
+        z-index: -999;
+    }
+
+    &--small {
+        padding: 250px 15px 50px 50px;
+        width: 50%;
+        height: 50%;
+        
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            padding: 50px 15px 20px 50px;
+            width: 100%;
+            height: auto;
+        }
+
+        .catalog-item-description {
+            position: absolute;
+            max-width: 180px;
+            left: 50px;
+            bottom: 100px;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                position: static;
+            }
+        }
+    }
+    
+
+    &--normal {
+        padding: 50px 15px 150px 100px;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+           padding: 50px 15px 80px 50px;
+        }
+
+        .section-description {
+            left: -50px;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                left: 0;
+            }
+        }
+
+        .catalog-item-description {
+            max-width: 150px;
+        }
+    }
+
+    &--big {
+        padding: 50px 60px 150px 180px;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            padding: 100px 15px 80px 50px;
+        }
+
+        .catalog-item-description {
+            max-width: 280px;
+        }
+    }
+
+    &--dark {
+        color: $dark;
+
+        .more-info {
+
+            &__link {
+                color: $dark;
+            }
+        }
+    }
+
+    &:hover {
+
+        .catalog-item__img {
+            transform: scale(1.2);
+        }
+
+        .catalog-item__promotional {
+            right: -90px;
+        }
+        
+        .more-info { 
+            
+            &__link {
+                color: #fff;
+            }  
+        
+            &::before {
+                right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+#about {
+    padding: 100px 0 50px;
+    @extend %img;
+
+    .about-description {
+        max-width: 680px;
+    }
+
+    .more-info {
+        &::before {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.btn {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: normal;
+    
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}

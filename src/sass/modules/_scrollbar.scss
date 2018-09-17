@@ -1,0 +1,30 @@
+.mCustomScrollBox {
+    width: 100%;
+}
+
+.mCSB_inside > .mCSB_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    margin-right: 0 !important;
+} 
+
+.mCSB_dragger_bar {
+    width: 3px !important;
+    background-color: $primary !important;
+    right: 0 !important;
+    z-index: 99;
+}
+
+.mCSB_scrollTools,
+.mCSB_draggerContainer {
+    top: 10px !important;
+    left: auto !important;
+    right: 0 !important;
+    z-index: 99;
+}
+
+.mCSB_draggerRail {
+    width: 3px !important;
+    background-color: #ebebeb;
+}

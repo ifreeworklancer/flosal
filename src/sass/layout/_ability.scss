@@ -1,0 +1,78 @@
+#ability {
+    padding-bottom: 60px;
+}
+.ability-img {
+    @extend %pos;
+    @extend %img;
+    z-index: -10;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        position: relative;
+        padding-top: 300px;
+    }
+}
+
+.decoration-border {
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 450px;
+    border: 3px solid #D7D7D7;
+    z-index: -9;
+}
+
+.ability-item {
+    padding: 130px 15px 140px 80px;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        padding: 40px 15px 30px 15px;
+    }
+
+    &-list {
+        position: relative;
+        padding-top: 20px;
+
+        &__item {
+            position: relative;
+            padding-left: 50px;
+            list-style-type:none;
+            counter-increment: list;
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: normal;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                font-size: 16px;
+            }
+
+            &::before {
+                content: "0" counter(list) " ";
+                position: absolute;
+                left: 10px;
+                color: $primary;
+                z-index: 3;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 20px;
+                top: 10px;
+                width: 20px;
+                height: 20px;
+                background: #e1e1e1;
+                z-index: 2;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 1px;
+            background: #979797;
+        }
+    }
+}

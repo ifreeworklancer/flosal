@@ -1,0 +1,26 @@
+$light: #74686f;
+$primary: #5e193f;
+$dark: #1d1d1d;
+$secondary: #f8f7f7;
+
+$body-color: #fff !default;
+
+$font-size-base: 1rem;
+$font-family-base: 'Open Sans', sans-serif;
+$headings-font-weight: bold;
+
+$link-hover-decoration:     none !default;
+$input-btn-focus-width:       0 !default;
+$input-btn-focus-color:       rgba(#fff, 0) !default;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+$border-width: 0 !default;
+
+$border-radius: 0;
+$btn-padding-x: 50px;
+$btn-padding-y: 25px;
+
+$h2-font-size: $font-size-base * 3 !default;
+$h3-font-size: $font-size-base * 2.125 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.125 !default;

@@ -1,0 +1,53 @@
+.breadcrumbs {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+
+    &-list {
+        margin-bottom: 0;
+        padding-left: 30px;
+
+        
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            padding-left: 15px;
+        }
+
+        &-item {
+            cursor: pointer;
+
+            &:last-child() {
+                
+                .breadcrumbs-list-item__link {
+                    border-bottom: 1px solid transparent;
+
+                    
+                    &:hover {
+                        border-color: $dark;
+                    }
+                }       
+            }
+    
+            &__link {
+                color: $dark;
+                font-size: 18px;
+                border-bottom: 1px solid $dark;
+                transition: .5s;
+            }
+            
+            &::after {
+                content: '/';
+                font-size: 18px;
+                color: $dark;
+                font-family: 'ProximaNova', sans-serif;
+            }
+    
+            &:last-of-type {
+                &::after {
+                    content: '';
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,254 @@
+.app-header {
+    position: absolute;
+    top: 0;
+    z-index: 999999999;
+
+    &.active {
+
+        &::after {
+            width: 725px;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 99px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: rgba(#fff, .45);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 99px;
+        left: 0;
+        width: 0;
+        max-width: 725px;
+        height: 1px;
+        background: rgba(#b7b7b7, .45);
+        z-index: 1000;
+        transition: .5s;
+    }
+
+    .header-item {
+        height: 100px;
+
+        &:first-of-type {
+            width: 60%;
+
+            @media (max-width: map_get($grid-breakpoints, lg)) {
+                width: 100%;
+            }
+        }
+    }
+
+    .logo {
+        width: 150px;
+        height: 100px;
+        background-color: $primary;
+        transition: .5s;
+
+        &.active {
+            background-color: transparent;
+
+            .logo-icon--white {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            .logo-icon--primary {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+
+        &-icon {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85px;
+            height: 40px;
+            @extend %img;
+            transition: .3s;
+
+            &--primary {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .phone-list {
+        width: 340px;
+        height: 100px;
+        padding: 0 15px;
+        border-left: 1px solid rgba(#fff, .45);
+
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+            padding: 0 60px;
+        }
+
+        &-item {
+            font-size: 12px;
+            border-bottom: 1px solid transparent;
+            transition: .5s;
+            
+            @media (min-width: map_get($grid-breakpoints, xl)) {
+                font-size: 14px;
+            }
+
+            &:hover {
+                border-bottom: 1px solid #fff;
+            }
+        } 
+    }
+
+    &--main {
+        width: 100%;
+    }
+
+    &--secondary {
+        position: relative;
+
+        .burger-menu {
+            width: 45%;
+        }
+
+        .logo {
+            width: 55%;
+        }
+        
+        .search  {
+            background-color: #ffedf6;
+            width: 100%;
+            max-width: none;
+
+            @media (max-width: map_get($grid-breakpoints, lg)) {
+                width: 100%;
+            }
+
+            .form-control {
+    
+                &::-webkit-input-placeholder {
+                    color: $primary;
+                }
+                &::-moz-placeholder {
+                    color: $primary;
+                }
+            }
+
+            .search-btn {
+    
+                svg {
+                    fill: $primary;
+                }
+            }
+        }
+
+        .phone-list {
+            background-color: #f3f3f3;
+            color: #b0b0b0;
+            padding: 0 15px;
+
+            &-item {
+
+                &__link {
+                    color: #b0b0b0;
+                }
+
+                &:hover {
+                    border-bottom: 1px solid #b0b0b0;
+                }
+            }
+        }
+
+        .social-list {
+            background-color: #fff;
+            border-left: 1px solid rgba(#b7b7b7, .45);
+            border-right: 1px solid rgba(#b7b7b7, .45);
+        }
+
+        &::before {
+            top: 99px;
+            background: rgba(#b7b7b7, .45);
+            z-index: 10000;
+        }
+    }
+}
+
+.social-list {
+    padding-right: 35px;
+
+    &-item {
+
+        &--dark {
+
+            svg {
+                fill: #8a8f9d;
+            }
+        }
+
+        &--white {
+
+            svg {
+                fill: #fff;
+            }
+        }
+
+        &--light {
+
+            svg {
+                fill: #b0b0b0;
+            }
+        }
+
+        svg {
+            transition: .5s;
+        }
+
+        &--link {
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        &:hover {
+
+            &.social-list-item--user {
+
+                svg {
+                    fill: $primary;
+                }
+            }
+            &.social-list-item--facebook {
+
+                svg {
+                    fill: #4267B2;
+                }
+            }
+            &.social-list-item--instagram {
+
+                svg {
+                    fill: #D14F69;
+                }
+            }
+            &.social-list-item--youtube {
+
+                svg {
+                    fill: #FF0101;
+                }
+            }
+            &.social-list-item--telegram {
+
+                svg {
+                    fill: #1C8DC8;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.pagination {
+    background-color: $secondary;
+
+    &-item {
+        padding: 1.5rem .7rem;
+        font-size: 18px;
+        font-weight: normal;
+        color: $dark;
+        border-bottom: 2px solid transparent;
+        transition: .5s;
+
+        &.active {
+            color: #fff;
+            background-color: $primary;
+        }
+
+        &:hover {
+            border-color: $primary;
+        }
+    }
+}

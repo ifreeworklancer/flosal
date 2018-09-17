@@ -1,0 +1,28 @@
+%img {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+%pos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+%bgSecondary {
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -300px;
+    right: 500px;
+    bottom: 0;
+    background: $secondary;
+    z-index: 1;
+    transition: .7s;
+  }
+}

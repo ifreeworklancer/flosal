@@ -1,0 +1,16 @@
+.modal-mask {
+    @extend %pos;
+    background: rgba(#000, .5);
+    z-index: 9999998;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    transition: .5s;
+
+    &.is-active {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+    }
+}

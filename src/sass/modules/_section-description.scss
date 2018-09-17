@@ -1,0 +1,43 @@
+.section-description {
+    position: relative;
+    padding: 50px 70px 70px 50px;
+    max-width: 590px;
+    border: 4px solid #fff;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding: 20px 30px 50px 30px;
+    }
+
+    .btn {
+        right: 40px;
+        bottom: -37px;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            right: 10%;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        
+    }
+    &__text {
+        color: $dark;
+    }
+
+    &__link {
+        transition: .5s;
+        border-bottom: 1px solid transparent;
+
+        &--dark {
+
+            &:hover {
+                border-color: $dark !important;
+            }
+        }
+
+        &:hover {
+            border-color: #fff;
+        }
+    }
+}
