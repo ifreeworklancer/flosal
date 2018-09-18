@@ -363,6 +363,14 @@
     @extend #form-login;
 }
 
+#form-make {
+    @extend #form-feedback;
+
+    .form-group {
+        margin-top: 50px;
+    }
+}
+
 .form-tooltip {
     z-index: 9999;
 

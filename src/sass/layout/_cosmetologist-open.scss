@@ -1,3 +1,124 @@
 #cosmetologist-open {
-    
+    padding-top: 100px;
+
+    .breadcrumbs {
+        top: -50px;
+    }
+}
+
+.cosmetologist-open-item {
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 140px;
+    padding-top: 0;
+    padding-bottom: 150px;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 40%;
+        left: -80px;
+        right: -3000px;
+        bottom: -150px;
+        background-color: $secondary;
+        z-index: -5;
+    }
+}
+
+.cosmetologist-open-card {
+    color: $dark;
+    max-width: 520px;
+
+    .btn {
+        border: 1px solid $primary;
+    }
+
+    &__img {
+        padding-top: 500px;
+        @extend %img;
+        border-bottom: 2px solid $primary;
+    }
+
+    &__position {
+        margin-top: 30px;
+        font-size: 18px;
+        text-align: center;
+        color: #8d8d8d;
+    }
+
+    &__description {
+        font-size: 18px;
+    }
+}
+
+.make-modal {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -400px;
+    width: 100%;
+    max-width: 730px;
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    box-shadow: 0px 0px 38px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+
+    &-close {
+        top: -1px;
+        right: -1px;
+        width: 70px;
+        height: 70px;
+        background: #ebebeb;
+        border: 1px solid #d7d7d7;
+        cursor: pointer;
+        transition: .5s;
+
+        .line {
+            width: 30px;
+            height: 2px;
+            background-color: #d7d7d7;
+            top: 30px;
+            left: 20px;
+            transition: .8s;
+            perspective: 1000px;
+
+            &--left {
+                transform: rotate(-45deg);
+            }
+
+            &--right {
+                transform: rotate(45deg);
+            }
+        }
+
+        &:hover {
+            background: $danger;
+
+            .line {
+
+                &--left {
+                    transform: rotate(45deg);
+                }
+
+                &--right {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &-header {
+        padding: 40px 0 0 40px;
+    }
+
+    &-body {
+        padding-left: 40px;
+        padding-bottom: 100px;
+
+        .btn {
+            right: -1px;
+            bottom: -1px;
+        }
+    }
 }
