@@ -13113,20 +13113,6 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
     });
 
     /**
-     * Form-label
-     */
-    $('.form-control').on('focus', function () {
-        $(this).parent().addClass('in-focus');
-    });
-    $('.form-control').on('blur', function () {
-        if ($(this).val() !== "") {
-            $(this).parent().addClass('in-focus');
-        } else {
-            $(this).parent().removeClass('in-focus');
-        }
-    });
-
-    /**
      * Pagination
      */
     $('.pagination-item').on('click', function (e) {
@@ -13187,12 +13173,42 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
         }
     });
 
+    if ($(window).width() < 900) {
+        $('.filters-content-item__title').on('click', function (e) {
+            e.preventDefault();
+            $(this).siblings().children().slideToggle();
+        });
+    }
+
+    if ($(window).width() < 900) {
+        $('.filters-content-item__title-scrollbar').on('click', function (e) {
+            e.preventDefault();
+            $(this).siblings().slideToggle();
+            $(this).siblings().children().children().children().eq(0).slideToggle();
+            console.log($(this).siblings().children().children().children().eq(0));
+        });
+    }
+
     /**
      * Scrollbar
      */
-    $('.filters-content-item-centering--scrollbar').mCustomScrollbar({
+
+    if ($(window).width() < 900) {
+        $('.filters-content-item-centering--scrollbar').mCustomScrollbar({
+            axis: "y",
+            setHeight: 200
+        });
+    }
+    if ($(window).width() > 900) {
+        $('.filters-content-item-centering--scrollbar').mCustomScrollbar({
+            axis: "y",
+            setHeight: 700
+        });
+    }
+
+    $('.cosmetologist-change-city-scrollbar').mCustomScrollbar({
         axis: "y",
-        setHeight: 700
+        setHeight: 400
     });
 
     /**
@@ -13250,6 +13266,140 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
                 $('.about-item').addClass('animated slideInLeft');
             }
         }
+    });
+
+    /**
+    * Form-label
+    */
+    $('.form-control').on('focus', function () {
+        $(this).parent().addClass('in-focus');
+    });
+    $('.form-control').on('blur', function () {
+        $(this).parent().removeClass('in-focus');
+        if ($(this).val() !== "") {
+            $(this).parent().addClass('in-filed');
+        } else {
+            $(this).parent().removeClass('in-filed');
+        }
+    });
+
+    /**
+     * Form Login
+     */
+
+    $('#login-checkme').on('change', function () {
+        if ($(this).is(':checked')) {
+            $(this).parent().addClass('is-checked');
+
+            if ($('#login-email').parent().hasClass('is-wrong')) {
+                $('#login-email').parent().removeClass('is-check');
+            } else {
+                $('#login-email').parent().addClass('is-check');
+            }
+        } else {
+            $(this).parent().removeClass('is-checked');
+            $('#login-email').parent().removeClass('is-check');
+        }
+    });
+
+    $('#login-email').on('blur', function () {
+        if ($(this).val() !== "") {
+            if (isValidEmail($(this).val())) {
+                $(this).parent().addClass('is-success');
+                $(this).parent().removeClass('is-wrong');
+            } else {
+                $(this).parent().addClass('is-wrong');
+                $(this).parent().removeClass('is-success');
+
+                if ($('#login-email').parent().hasClass('is-wrong')) {
+                    $('#login-email').parent().removeClass('is-check');
+                }
+            }
+        }
+    });
+
+    /**
+     * Form SingUp
+     */
+
+    $('#singup-checkme').on('change', function () {
+        if ($(this).is(':checked')) {
+            $(this).parent().addClass('is-checked');
+            if ($('#singup-email').parent().hasClass('is-wrong')) {
+                $('#singup-email').parent().removeClass('is-check');
+            } else {
+                $('#singup-email').parent().addClass('is-check');
+            }
+        } else {
+            $(this).parent().removeClass('is-checked');
+            $('#singup-email').parent().removeClass('is-check');
+        }
+    });
+
+    $('#singup-cosmetologist').on('change', function () {
+        if ($(this).is(':checked')) {
+            $(this).parent().addClass('is-checked');
+            $('#singup-file-label').addClass('is-checked');
+        } else {
+            $(this).parent().removeClass('is-checked');
+            $('#singup-file-label').removeClass('is-checked');
+        }
+    });
+
+    $('#singup-email').on('blur', function () {
+        if ($(this).val() !== "") {
+            if (isValidEmail($(this).val())) {
+                $(this).parent().addClass('is-success');
+                $(this).parent().removeClass('is-wrong');
+            } else {
+                $(this).parent().addClass('is-wrong');
+                $(this).parent().removeClass('is-success');
+
+                if ($('#singup-email').parent().hasClass('is-wrong')) {
+                    $('#singup-email').parent().removeClass('is-check');
+                }
+            }
+        }
+    });
+
+    $('#singup-confirmPassword').on('blur', function () {
+        if ($(this).val() !== "") {
+            if ($(this).val() === $('#singup-password').val()) {
+                $(this).parent().addClass('is-success');
+                $(this).parent().removeClass('is-wrong');
+                $('#singup-password').parent().addClass('is-success');
+            } else {
+                $(this).parent().addClass('is-wrong');
+                $(this).parent().removeClass('is-success');
+                $('#singup-password').parent().removeClass('is-success');
+            }
+        }
+    });
+
+    $('.form-tooltip').on('click', function (e) {
+        e.preventDefault();
+    });
+
+    function isValidEmail(email) {
+        return (/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(email)
+        );
+    }
+
+    /**
+     * Cosmetologist change city
+     */
+
+    $('.cosmetologist-change-city-btn').on('click', function (e) {
+        e.preventDefault();
+        $(this).siblings().slideToggle();
+        $(this).toggleClass('active');
+        $('.cosmetologist-change-city').toggleClass('active');
+    });
+
+    $('.cosmetologist-change-city-list-item__link').on('click', function (e) {
+        e.preventDefault();
+        $('.cosmetologist-change-city-list-item').removeClass('active');
+        $(this).parent().toggleClass('active');
     });
 })(jQuery);
 
@@ -13393,7 +13543,7 @@ if (elem4) {
 /**
  * Sliders Promotional products
  */
-var elem5 = document.querySelector('.promotional-products-slider');
+var elem5 = document.querySelector('.slider-onSecondaryPage--promotional');
 
 if (elem5) {
 
@@ -13402,18 +13552,45 @@ if (elem5) {
         cellAlign: 'left',
         pageDots: true,
         draggable: true,
-        cellSelector: '.promotional-products-slider-row',
+        cellSelector: '.slider-onSecondaryPage-row--promotional',
         wrapAround: true
     });
 
-    var prevArrowCatalogCosmetics = document.querySelector('.promotional-products-slider-nav-arrow-left');
+    var prevArrowCatalogCosmetics = document.querySelector('.slider-onSecondaryPage-nav-arrow-left--promotional');
     prevArrowCatalogCosmetics.addEventListener('click', function () {
         flkty5.previous(true, false);
     });
 
-    var nextArrowCatalogCosmetics = document.querySelector('.promotional-products-slider-nav-arrow-right');
+    var nextArrowCatalogCosmetics = document.querySelector('.slider-onSecondaryPage-nav-arrow-right--promotional');
     nextArrowCatalogCosmetics.addEventListener('click', function () {
         flkty5.next(true, false);
+    });
+}
+
+/**
+ * Sliders Interesting products
+ */
+var elem6 = document.querySelector('.slider-onSecondaryPage--interesting');
+
+if (elem6) {
+
+    var flkty6 = new __WEBPACK_IMPORTED_MODULE_1_flickity___default.a(elem6, {
+        prevNextButtons: false,
+        cellAlign: 'left',
+        pageDots: true,
+        draggable: true,
+        cellSelector: '.slider-onSecondaryPage-row--interesting',
+        wrapAround: true
+    });
+
+    var prevArrowCatalogCosmetics = document.querySelector('.slider-onSecondaryPage-nav-arrow-left--interesting');
+    prevArrowCatalogCosmetics.addEventListener('click', function () {
+        flkty6.previous(true, false);
+    });
+
+    var nextArrowCatalogCosmetics = document.querySelector('.slider-onSecondaryPage-nav-arrow-right--interesting');
+    nextArrowCatalogCosmetics.addEventListener('click', function () {
+        flkty6.next(true, false);
     });
 }
 

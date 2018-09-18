@@ -1,0 +1,17 @@
+#singup {
+    padding: 150px 0 50px; 
+    background-color: #eee9ec;
+
+    .singup-img {
+        @extend %pos;
+        @extend %img;
+        right: 50%;
+    }
+}
+
+.singup-help {
+    
+    &-item {
+        color: #b99eac;
+    }
+}

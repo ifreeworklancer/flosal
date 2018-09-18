@@ -1,8 +1,19 @@
 #catalog-page {
 
+    .breadcrumbs {
+            
+        @media (max-width: map_get($grid-breakpoints, lg)) {
+            top: 100px;
+        }
+    }
+    
     .decoration-img {
         @extend %pos;
         @extend %img;
+
+        @media (max-width: map_get($grid-breakpoints, lg)) {
+            display: none;
+        }
     }
 
     .catalog-item {
@@ -33,4 +44,9 @@
             }
         }
     }
+}
+
+#promotional-products { 
+    margin-top: 60px;
+    margin-bottom: 120px;
 }

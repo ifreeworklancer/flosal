@@ -1,0 +1,204 @@
+#cosmetologist {
+    padding-top: 100px;
+
+    .breadcrumbs {
+        position: relative;
+    }
+
+    .decoration-column {
+        top: 100px;
+        left: 0;
+        width: 100%;
+        max-width: 250px;
+
+        &-img {
+            @extend %img;
+            padding-top: 850px;
+            z-index: 20;
+        }
+    }
+}
+
+.cosmetologist-item {
+    padding: 80px 40px 0;
+    max-width: 1140px;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding: 80px 15px 0;
+    }
+
+    .cosmetologist-change {
+
+        .cosmetologist-change-city-title {
+            color: #9f9e9e;
+        }
+
+        .cosmetologist-change-city {
+            transition: .5s;
+
+            .cosmetologist-change-city-btn {
+                color: $dark;
+                border: 1px solid #cccccc;
+                transition: .5s;
+
+                &.active {
+                    color: #b7b7b7;
+                    background: #fff;
+                }
+            }
+        }
+
+        .cosmetologist-change-city-scrollbar {
+            top: 79px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            display: none;
+
+            .mCSB_scrollTools,
+            .mCSB_draggerContainer {    
+                right: 0 !important;
+            }  
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                max-width: 230px;    
+            }
+        }
+
+        .cosmetologist-change-city-list {
+            width: 100%;
+            background: #fff;
+            z-index: 20;
+
+            &-item {
+                position: relative;
+                padding: 20px 0;
+                text-align: center;
+
+                &.active {
+
+                    &::before {
+                        right: 0;
+                    }
+
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                &__link {
+                    color: $dark;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 100%;
+                    bottom: 0;
+                    background: $secondary;
+                    transition: .5s;
+                    z-index: -5;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 30px;
+                    width: 15px;
+                    height: 10px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI2IDI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNiAyNiIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KICA8cGF0aCBkPSJtLjMsMTRjLTAuMi0wLjItMC4zLTAuNS0wLjMtMC43czAuMS0wLjUgMC4zLTAuN2wxLjQtMS40YzAuNC0wLjQgMS0wLjQgMS40LDBsLjEsLjEgNS41LDUuOWMwLjIsMC4yIDAuNSwwLjIgMC43LDBsMTMuNC0xMy45aDAuMXYtOC44ODE3OGUtMTZjMC40LTAuNCAxLTAuNCAxLjQsMGwxLjQsMS40YzAuNCwwLjQgMC40LDEgMCwxLjRsMCwwLTE2LDE2LjZjLTAuMiwwLjItMC40LDAuMy0wLjcsMC4zLTAuMywwLTAuNS0wLjEtMC43LTAuM2wtNy44LTguNC0uMi0uM3oiIGZpbGw9IiM5ZjlmOWYiLz4KPC9zdmc+Cg==);
+                    opacity: 0;
+                    transition: .5s;
+                }
+            }
+        }
+
+        &-item {
+            max-width: 580px;
+        }
+    }
+}
+
+.cosmetologist-card-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+
+    @media (max-width: map_get($grid-breakpoints, lg)) {
+        margin-top: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cosmetologist-card {
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        background-color: #fff;
+        transition: .5s;
+
+        @media (max-width: map_get($grid-breakpoints, lg)) {
+            margin-bottom: 30px;
+        }
+
+        .more-info {
+            position: absolute;
+            right: -30px;
+            bottom: 0;
+
+            &__link {
+                color: #7d7d7d;
+
+                &::before {
+                    background-color: #7d7d7d;
+                }
+            }
+            
+            &::before {
+                display: none;
+            }
+        }
+
+        &-description {
+            padding: 25px 30px 60px;
+            border: 1px solid #ebebeb;
+            border-top: none;
+
+            &__name {
+                color: $dark;
+            }
+
+            &__position {
+                color: #818181;
+            }
+        }
+
+        &__img {
+            @extend %img;
+            padding-top: 295px;
+            border-bottom: 2px solid $primary;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 25px 4px rgba(0, 0, 0, 0.2);
+
+            .more-info__link {
+
+                &::before {
+                    background-color: $primary;
+                }
+                
+                &::after {
+                    border-color: transparent transparent transparent #fff;
+                }
+            }
+        }
+    }
+}

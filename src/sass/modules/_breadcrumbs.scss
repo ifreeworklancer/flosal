@@ -16,24 +16,21 @@
 
         &-item {
             cursor: pointer;
-
-            &:last-child() {
-                
-                .breadcrumbs-list-item__link {
-                    border-bottom: 1px solid transparent;
-
-                    
-                    &:hover {
-                        border-color: $dark;
-                    }
-                }       
-            }
     
             &__link {
                 color: $dark;
+                border-bottom: 1px solid transparent;
                 font-size: 18px;
-                border-bottom: 1px solid $dark;
                 transition: .5s;
+
+                @media (max-width: map_get($grid-breakpoints, sm)) {
+                    font-size: 14px;
+                }
+        
+                
+                &:hover {
+                    border-color: $dark;
+                }
             }
             
             &::after {
@@ -41,6 +38,10 @@
                 font-size: 18px;
                 color: $dark;
                 font-family: 'ProximaNova', sans-serif;
+
+                @media (max-width: map_get($grid-breakpoints, sm)) {
+                    font-size: 14px;
+                }
             }
     
             &:last-of-type {

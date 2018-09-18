@@ -1,0 +1,42 @@
+#login {
+    height: 100vh;
+    min-height: 800px;
+    background-color: #eee9ec;
+
+    .login-img {
+        @extend %pos;
+        @extend %img;
+        left: 50%;
+    }
+}
+
+.input-selection {
+
+    &-item {
+        flex: 1 0 auto;
+        padding: 15px 0 10px;
+        text-align: center;
+        font-size: 18px;
+        color: #b99eac;
+        background-color: #e7dfe3;
+
+        &--check {
+            padding-right: 70px;
+            font-size: 22px;
+            text-align: left;
+            color: #535353;
+            background: transparent;
+        }
+    }
+}
+
+.login-item {
+    max-width: 520px;
+}
+
+.login-help {
+
+    &-item {
+        color: #b99eac;
+    }
+}

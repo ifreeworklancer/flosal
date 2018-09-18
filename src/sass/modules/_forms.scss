@@ -106,7 +106,30 @@
         bottom: 0;
         background-color: rgba(#fff,.4);
         transition: .8s;
-    }   
+    }  
+
+    &--dark {
+
+        .form-control {
+    
+            &::-webkit-input-placeholder {
+                color: $dark;
+            }
+            &::-moz-placeholder {
+                color: $dark;
+            }
+        }
+
+        .search-btn {
+            svg {
+                fill: $dark;
+            }
+        }
+
+        &::before {
+            background-color: rgba($secondary ,.4);
+        }   
+    } 
 }
 
 #form-feedback {
@@ -114,6 +137,20 @@
     .form-group {
         width: 100%;
         max-width: 470px;
+
+        &.in-filed {
+
+            .label-placeholder {
+                font-size: 14px;
+                color: $primary;
+                bottom: 80%;
+            }
+
+            &::before {
+                width: 100%;
+                background-color: $primary;
+            }
+        }
 
         &.in-focus {
 
@@ -151,9 +188,234 @@
             bottom: 0;
             left: 0;
             width: 30px;
-            height: 1px;
+            height: 2px;
             background-color: #6e6e6e;
             transition: .5s;
         }
+    }
+}
+
+#form-login {
+    @extend #form-feedback;
+
+    .form-file-input {
+        display: none;
+    }
+
+    .form-file-label {
+        margin-bottom: 0;
+        padding-right: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        pointer-events: none;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+           right: -10px;
+        }
+
+        &.is-checked {
+            pointer-events: all;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 15px;
+            height: 25px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhciIgZGF0YS1pY29uPSJmaWxlIiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtZmlsZSBmYS13LTEyIiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDM4NCA1MTIiPjxwYXRoIGZpbGw9IiM1ZTE5M2YiIGQ9Ik0zNjkuOSA5Ny45TDI4NiAxNEMyNzcgNSAyNjQuOC0uMSAyNTIuMS0uMUg0OEMyMS41IDAgMCAyMS41IDAgNDh2NDE2YzAgMjYuNSAyMS41IDQ4IDQ4IDQ4aDI4OGMyNi41IDAgNDgtMjEuNSA0OC00OFYxMzEuOWMwLTEyLjctNS4xLTI1LTE0LjEtMzR6TTMzMi4xIDEyOEgyNTZWNTEuOWw3Ni4xIDc2LjF6TTQ4IDQ2NFY0OGgxNjB2MTA0YzAgMTMuMyAxMC43IDI0IDI0IDI0aDEwNHYyODhINDh6Ij48L3BhdGg+PC9zdmc+);
+        }
+    }
+
+    .form-group {
+        opacity: .5;
+        transition: .5s;
+
+        &.is-wrong {
+            opacity: 1;
+
+            .form-icon {
+
+                &--compulsory {
+                    opacity: 0;
+                }
+
+                &--wrong {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            &::before {
+                background: #e71818;
+            }
+        }
+
+        &.is-success {
+
+            .form-icon {
+
+                &--compulsory {
+                    opacity: 0;
+                }
+
+                &--success {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.is-check {
+
+            .form-icon {
+                opacity: 0;
+
+                &--lock {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+        }
+        
+        .form-icon {
+
+            &--compulsory {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        
+        &.in-focus {
+            opacity: 1;
+        }
+
+        &.form-check {
+            
+            &.is-checked {
+                opacity: 1;
+            }
+
+            .form-check-input {
+                display: none;
+            }
+
+            .form-check-label {
+                font-size: 14px;
+                user-select: none;
+                cursor: pointer;
+            }
+
+            .form-check-label::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 15px;
+                height: 15px;
+                border: 2px solid $primary;
+                cursor: pointer;
+              }
+
+            .form-check-input[type="checkbox"]:checked + .form-check-label::before {
+              content: '';
+              background-size: 100%;
+              background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjNWUxOTNmIj48cGF0aCBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+);
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .form-icon {
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s;
+            z-index: 9999999;
+            
+            &__text {
+                font-size: 14px;
+            }
+
+            &--file {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            svg {
+                fill: $primary;
+            }
+        }
+    }
+}
+
+#form-singup {
+    @extend #form-login;
+}
+
+.form-tooltip {
+    z-index: 9999;
+
+    &:hover {
+
+        &::after {
+            opacity: 1;
+        }
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content: attr(title);
+        position: absolute;
+        top: -45px;
+        left: -100px;
+        padding: 10px 0;
+        width: 220px;
+        background: #fff;
+        box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 12px;
+        color: $dark;
+        z-index: 98;
+        opacity: 0;
+        pointer-events: none;
+        transition: .5s;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            left: -200px;
+         }
+    }
+
+    &::before {
+        content: "";
+        top: -45px;
+        left: -110px;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 19px 10px 19px 0;
+        border-color: transparent #ffffff transparent transparent;
+        z-index: 99;
+        opacity: 0;
+        pointer-events: none;
+        transition: .5s;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            left: -210px;
+         }
     }
 }

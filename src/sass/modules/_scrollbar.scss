@@ -22,6 +22,11 @@
     left: auto !important;
     right: 0 !important;
     z-index: 99;
+
+    
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        right: 20px !important;
+    }
 }
 
 .mCSB_draggerRail {
