@@ -52,6 +52,11 @@
             }
         }
     }
+
+    &--recommended { 
+        @extend .slider-onSecondaryPage--promotional;
+
+    }
 }
 
 .slider-onSecondaryPage-nav-arrow {

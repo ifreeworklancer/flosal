@@ -15,6 +15,7 @@
         }
 
         &-item {
+            position: relative;
             cursor: pointer;
     
             &__link {
@@ -24,7 +25,7 @@
                 transition: .5s;
 
                 @media (max-width: map_get($grid-breakpoints, sm)) {
-                    font-size: 14px;
+                    font-size: 12px;
                 }
         
                 
@@ -40,7 +41,7 @@
                 font-family: 'ProximaNova', sans-serif;
 
                 @media (max-width: map_get($grid-breakpoints, sm)) {
-                    font-size: 14px;
+                    font-size: 12px;
                 }
             }
     

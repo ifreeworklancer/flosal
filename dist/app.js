@@ -13386,7 +13386,7 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
     }
 
     /**
-     * Cosmetologist change city
+     * Cosmetologist
      */
 
     $('.cosmetologist-change-city-btn').on('click', function (e) {
@@ -13400,6 +13400,69 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
         e.preventDefault();
         $('.cosmetologist-change-city-list-item').removeClass('active');
         $(this).parent().toggleClass('active');
+    });
+
+    /**
+     * Cosmetologist Open
+     */
+    $('#open-modal-make').on('click', function (e) {
+        e.preventDefault();
+        $('.make-modal').addClass('modal-active animated bounceInUp').removeClass('bounceOutDown');
+    });
+
+    $('.make-modal-close').on('click', function (e) {
+        $('.make-modal').addClass('bounceOutDown');
+        setTimeout(function () {
+            $('.make-modal').removeClass('modal-active bounceInUp');
+        }, 500);
+    });
+
+    /**
+     * Tabs product card 
+     */
+
+    $('.product-card-desctiption-header-list').on('click', 'li:not(.active)', function () {
+        $(this).addClass('active').siblings().removeClass('active').closest('.product-card-desctiption').find('.product-card-desctiption-body-item').removeClass('active').eq($(this).index()).addClass('active');
+    });
+
+    if ($(window).width() < 768) {
+        $('.product-card-desctiption-body-item').addClass('active');
+    }
+
+    /**
+     * Form product value (Basket)
+     */
+
+    $('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
+    $('.quantity').each(function () {
+        var spinner = $(this),
+            input = spinner.find('input[type="number"]'),
+            btnUp = spinner.find('.quantity-up'),
+            btnDown = spinner.find('.quantity-down'),
+            min = input.attr('min'),
+            max = input.attr('max');
+
+        btnUp.click(function () {
+            var oldValue = parseFloat(input.val());
+            if (oldValue >= max) {
+                var newVal = oldValue;
+            } else {
+                var newVal = oldValue + 1;
+            }
+            spinner.find("input").val(newVal);
+            spinner.find("input").trigger("change");
+        });
+
+        btnDown.click(function () {
+            var oldValue = parseFloat(input.val());
+            if (oldValue <= min) {
+                var newVal = oldValue;
+            } else {
+                var newVal = oldValue - 1;
+            }
+            spinner.find("input").val(newVal);
+            spinner.find("input").trigger("change");
+        });
     });
 })(jQuery);
 
@@ -13591,6 +13654,33 @@ if (elem6) {
     var nextArrowCatalogCosmetics = document.querySelector('.slider-onSecondaryPage-nav-arrow-right--interesting');
     nextArrowCatalogCosmetics.addEventListener('click', function () {
         flkty6.next(true, false);
+    });
+}
+
+/**
+ * Sliders recommended products
+ */
+var elem7 = document.querySelector('.slider-onSecondaryPage--recommended');
+
+if (elem7) {
+
+    var flkty7 = new __WEBPACK_IMPORTED_MODULE_1_flickity___default.a(elem7, {
+        prevNextButtons: false,
+        cellAlign: 'left',
+        pageDots: true,
+        draggable: true,
+        cellSelector: '.slider-onSecondaryPage-row--recommended',
+        wrapAround: true
+    });
+
+    var prevArrowCatalogCosmetics = document.querySelector('.slider-onSecondaryPage-nav-arrow-left--recommended');
+    prevArrowCatalogCosmetics.addEventListener('click', function () {
+        flkty7.previous(true, false);
+    });
+
+    var nextArrowCatalogCosmetics = document.querySelector('.slider-onSecondaryPage-nav-arrow-right--recommended');
+    nextArrowCatalogCosmetics.addEventListener('click', function () {
+        flkty7.next(true, false);
     });
 }
 

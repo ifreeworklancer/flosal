@@ -4,26 +4,26 @@
     .breadcrumbs {
         position: relative;
     }
+}
 
-    .decoration-column {
-        top: 100px;
-        left: 0;
-        width: 100%;
-        max-width: 200px;
+.decoration-column {
+    top: 100px;
+    left: 0;
+    width: 100%;
+    max-width: 200px;
 
-        @media(max-width: 1520px) {
-            display: none;
-        }
+    @media(max-width: 1520px) {
+        display: none;
+    }
 
-        @media(min-width: 1800px) {
-            max-width: 250px;
-        }
+    @media(min-width: 1800px) {
+        max-width: 250px;
+    }
 
-        &-img {
-            @extend %img;
-            padding-top: 850px;
-            z-index: 20;
-        }
+    &-img {
+        @extend %img;
+        padding-top: 850px;
+        z-index: 20;
     }
 }
 
