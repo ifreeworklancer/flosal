@@ -323,29 +323,99 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <div class="basket-item d-flex justify-content-between">
-                            <div class="basket-item__img"></div>
+
+                        <div class="basket-item d-flex flex-column flex-lg-row justify-content-between">
+                            <div class="basket-item__img" style="background-image: url('images/content/catalog/catalog-item-4.jpg');"></div>
                             <div class="basket-item-cell">
-                                <div class="basket-item-cell-header"></div>
-                                <div class="basket-item-cell-body"></div>
+                                <div class="basket-item-cell-header">Наименование</div>
+                                <div class="basket-item-cell-body basket-item-cell-body--name-product text-dark"><span
+                                        class="font-weight-normal">Ревитализирующий крем</span> <span class="font-weight-bold">DERMAHEAL
+                                        VITALIZING CREAM</span>
+                                    40 мл
+                                </div>
                             </div>
                             <div class="basket-item-cell">
-                                <div class="basket-item-cell-header"></div>
-                                <div class="basket-item-cell-body"></div>
+                                <div class="basket-item-cell-header">Цена</div>
+                                <div class="basket-item-cell-body"><span class="font-weight-bold">900</span> <span
+                                        class="font-weight-normal">грн</span></div>
                             </div>
                             <div class="basket-item-cell">
-                                <div class="basket-item-cell-header"></div>
+                                <div class="basket-item-cell-header">Количество</div>
                                 <div class="basket-item-cell-body">
-                                    <form action="#" id="form-product-value">
+                                    <form action="#">
                                         <div class="quantity">
-                                            <input type="number" min="1" max="9" step="1" value="1" id="product-value">
+                                            <input type="number" min="1" step="1" value="1">
                                         </div>
                                     </form>
                                 </div>
                             </div>
                             <div class="basket-item-cell">
-                                <div class="basket-item-cell-header"></div>
-                                <div class="basket-item-cell-body"></div>
+                                <div class="basket-item-cell-header">Итого</div>
+                                <div class="basket-item-cell-body text-dark"><span class="font-weight-bold">900</span>
+                                    <span class="font-weight-normal">грн</span></div>
+                            </div>
+                            <div class="delete-of-basket position-absolute d-flex align-items-center">
+                                <div class="delete-of-basket__text mr-3">Удалить из корзины</div>
+                                <div class="delete-of-basket-icon">
+                                    <div class="line line--left"></div>
+                                    <div class="line line--right"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="basket-item d-flex flex-column flex-lg-row justify-content-between">
+                            <div class="basket-item__img" style="background-image: url('images/content/catalog/catalog-item-3.jpg');"></div>
+                            <div class="basket-item-cell">
+                                <div class="basket-item-cell-header">Наименование</div>
+                                <div class="basket-item-cell-body basket-item-cell-body--name-product text-dark"><span
+                                        class="font-weight-normal">Ревитализирующий Ревитализирующий Ревитализирующий
+                                        крем</span> <span class="font-weight-bold">DERMAHEAL VITALIZING CREAM</span>
+                                    40 мл
+                                </div>
+                            </div>
+                            <div class="basket-item-cell">
+                                <div class="basket-item-cell-header">Цена</div>
+                                <div class="basket-item-cell-body"><span class="font-weight-bold">900</span> <span
+                                        class="font-weight-normal">грн</span></div>
+                            </div>
+                            <div class="basket-item-cell">
+                                <div class="basket-item-cell-header">Количество</div>
+                                <div class="basket-item-cell-body">
+                                    <form action="#">
+                                        <div class="quantity">
+                                            <input type="number" min="1" step="1" value="1">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="basket-item-cell">
+                                <div class="basket-item-cell-header">Итого</div>
+                                <div class="basket-item-cell-body text-dark"><span class="font-weight-bold">900</span>
+                                    <span class="font-weight-normal">грн</span></div>
+                            </div>
+                            <div class="delete-of-basket position-absolute d-flex align-items-center">
+                                <div class="delete-of-basket__text mr-3">Удалить из корзины</div>
+                                <div class="delete-of-basket-icon">
+                                    <div class="line line--left"></div>
+                                    <div class="line line--right"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-10 ml-auto mr-0">
+                        <div class="basket-result d-flex justify-content-between align-items-center text-dark">
+                            <div class="basket-result-item">
+                                <div class="basket-result-item__text text-uppercase">Итого:</div>
+                            </div>
+                            <div class="basket-result-item d-flex align-items-center">
+                                <div class="basket-result-item-value mr-2 mr-md-5 font-weight-normal"><span class="font-weight-bold">1998</span>
+                                    грн</div>
+                                <a href="#" class="btn btn-primary basket-result-item-btn">Оформить заказ</a>
                             </div>
                         </div>
                     </div>
@@ -355,6 +425,165 @@
 
             </div>
         </section>
+
+        <!-- Recommended products -->
+        <section id="recommended-products">
+                <div class="container">
+                    <div class="col-12 p-0">
+                        <h3 class="section-title text-dark text-uppercase mb-5">Акционные товары</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="slider-onSecondaryPage slider-onSecondaryPage--recommended">
+                                <div class="slider-onSecondaryPage-row slider-onSecondaryPage-row--recommended">
+    
+                                    <div class="catalog-item catalog-item--small catalog-item--dark">
+                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-9.jpg');"></div>
+                                        <p class="catalog-item-description">
+                                            Очищающий гель
+                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
+                                        </p>
+                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
+                                                грн</s></div>
+                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
+                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
+                                        <div class="catalog-item__promotional">Акция</div>
+                                    </div>
+    
+    
+                                    <div class="catalog-item catalog-item--small catalog-item--dark">
+                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-7.jpg');"></div>
+                                        <p class="catalog-item-description">
+                                            Очищающий гель
+                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
+                                        </p>
+                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
+                                                грн</s></div>
+                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
+                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
+                                        <div class="catalog-item__promotional">Акция</div>
+                                    </div>
+    
+                                    <div class="catalog-item catalog-item--small catalog-item--dark">
+                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-5.jpg');"></div>
+                                        <p class="catalog-item-description">
+                                            Очищающий гель
+                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
+                                        </p>
+                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
+                                                грн</s></div>
+                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
+                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
+                                        <div class="catalog-item__promotional">Акция</div>
+                                    </div>
+    
+                                </div>
+                                <div class="slider-onSecondaryPage-row slider-onSecondaryPage-row--recommended">
+    
+                                    <div class="catalog-item catalog-item--small catalog-item--dark">
+                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-9.jpg');"></div>
+                                        <p class="catalog-item-description">
+                                            Очищающий гель
+                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
+                                        </p>
+                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
+                                                грн</s></div>
+                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
+                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
+                                        <div class="catalog-item__promotional">Акция</div>
+                                    </div>
+    
+    
+                                    <div class="catalog-item catalog-item--small catalog-item--dark">
+                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-7.jpg');"></div>
+                                        <p class="catalog-item-description">
+                                            Очищающий гель
+                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
+                                        </p>
+                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
+                                                грн</s></div>
+                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
+                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
+                                        <div class="catalog-item__promotional">Акция</div>
+                                    </div>
+    
+                                    <div class="catalog-item catalog-item--small catalog-item--dark">
+                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-5.jpg');"></div>
+                                        <p class="catalog-item-description">
+                                            Очищающий гель
+                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
+                                        </p>
+                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
+                                                грн</s></div>
+                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
+                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
+                                        <div class="catalog-item__promotional">Акция</div>
+                                    </div>
+    
+                                </div>
+                                <div class="slider-onSecondaryPage-row slider-onSecondaryPage-row--recommended">
+    
+                                    <div class="catalog-item catalog-item--small catalog-item--dark">
+                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-9.jpg');"></div>
+                                        <p class="catalog-item-description">
+                                            Очищающий гель
+                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
+                                        </p>
+                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
+                                                грн</s></div>
+                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
+                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
+                                        <div class="catalog-item__promotional">Акция</div>
+                                    </div>
+    
+    
+                                    <div class="catalog-item catalog-item--small catalog-item--dark">
+                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-7.jpg');"></div>
+                                        <p class="catalog-item-description">
+                                            Очищающий гель
+                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
+                                        </p>
+                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
+                                                грн</s></div>
+                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
+                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
+                                        <div class="catalog-item__promotional">Акция</div>
+                                    </div>
+    
+                                    <div class="catalog-item catalog-item--small catalog-item--dark">
+                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-5.jpg');"></div>
+                                        <p class="catalog-item-description">
+                                            Очищающий гель
+                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
+                                        </p>
+                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
+                                                грн</s></div>
+                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
+                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
+                                        <div class="catalog-item__promotional">Акция</div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end">
+                            <div class="slider-onSecondaryPage-nav-arrow slider-onSecondaryPage-nav-arrow--recommended d-flex position-absolute">
+                                <div class="slider-onSecondaryPage-nav-arrow-left slider-onSecondaryPage-nav-arrow-left--recommended mr-3">
+                                    <svg width="25" height="20">
+                                        <use xlink:href="#arrow-left-icon"></use>
+                                    </svg></div>
+                                <div class="slider-onSecondaryPage-nav-arrow-right slider-onSecondaryPage-nav-arrow-right--recommended">
+                                    <svg width="25" height="20">
+                                        <use xlink:href="#arrow-right-icon"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
     </main>
 

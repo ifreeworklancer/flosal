@@ -2,7 +2,7 @@
     padding: 100px 0;
 
     .partners-slider-nav-arrow {
-        
+
         &-left {
             cursor: pointer;
 
@@ -19,6 +19,7 @@
                 }
             }
         }
+
         &-right {
             @extend .partners-slider-nav-arrow-left;
         }
@@ -27,7 +28,7 @@
 
 .partners-slider {
     width: 100%;
-    
+
     .flickity-page-dots {
         display: flex;
         left: 50%;
@@ -66,6 +67,7 @@
         @media (min-width: map_get($grid-breakpoints, sm)) {
             width: 50%;
         }
+
         @media (min-width: map_get($grid-breakpoints, lg)) {
             width: 33.333%;
             justify-content: center;
@@ -78,8 +80,8 @@
 
         &-img {
             display: inline-block;
-            width: 50%; 
-            
+            width: 50%;
+
             img {
                 width: auto;
                 max-width: 170px;

@@ -38,6 +38,7 @@
                 border-bottom: 1px solid rgba(#b7b7b7, .45);
                 border-left: 1px solid rgba(#b7b7b7, .45);
             }
+
             .filters-content-item__title-scrollbar {
                 @extend .filters-content-item__title;
             }
@@ -105,7 +106,7 @@
 
         @extend %bgSecondary;
     }
-    
+
     &--filtersBy {
 
         .filters-content-item-list-cell-filtersBy {
@@ -132,7 +133,7 @@
                 margin: 0;
                 padding: 0 0 0 25px;
                 display: none;
-    
+
                 &-item {
                     position: relative;
                     padding: 15px 15px 15px 0;
@@ -142,12 +143,12 @@
                         .filters-content-item-list-cell__decoration-check {
                             opacity: 1;
                         }
-            
+
                         &::before {
                             right: -200px;
                         }
                     }
-                    
+
                     &__link {
                         @extend .filters-content-item-list-cell__link;
                     }
@@ -170,7 +171,7 @@
                 z-index: 2;
                 opacity: .5;
                 transition: .5s;
-    
+
                 .checked {
                     position: absolute;
                     top: 50%;
@@ -186,7 +187,7 @@
     }
 
     &--brand {
-        
+
         li {
             text-align: center;
         }
@@ -198,16 +199,16 @@
     width: 80px;
 
     @media (max-width: map_get($grid-breakpoints, lg)) {
-       position: absolute;
-       top: 0;
-       right: 0;
-       width: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
     }
-            
+
     &-close {
         display: block;
         height: 80px;
-        background: #e1e1e1; 
+        background: #e1e1e1;
         z-index: 9;
         cursor: pointer;
         transition: .5s;
@@ -268,7 +269,7 @@
                 bottom: 0;
             }
         }
-        
+
         &__text {
             position: absolute;
             top: 30%;
@@ -327,7 +328,7 @@
                 }
             }
         }
-        
+
         &-icon {
             top: 40%;
             right: 15px;
@@ -344,7 +345,7 @@
                 &:nth-child(2) {
                     width: 15px;
                 }
-                
+
                 &:nth-child(3) {
                     width: 5px;
                 }

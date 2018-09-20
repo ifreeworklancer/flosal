@@ -371,6 +371,10 @@
     }
 }
 
+#form-question {
+    @extend #form-make;
+}
+
 .form-tooltip {
     z-index: 9999;
 

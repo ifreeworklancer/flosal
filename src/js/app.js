@@ -12,8 +12,8 @@ import 'flickity/dist/flickity.css';
 (function () {
 
     /**
-    * Burger-menu
-    */
+     * Burger-menu
+     */
     $('.burger-menu').on('click', function () {
         var menu = $('.menu-nav');
         var logo = $('.logo');
@@ -212,8 +212,8 @@ import 'flickity/dist/flickity.css';
     });
 
     /**
-  * Form-label
-  */
+     * Form-label
+     */
     $('.form-control').on('focus', function () {
         $(this).parent().addClass('in-focus');
     });
@@ -340,26 +340,26 @@ import 'flickity/dist/flickity.css';
         $('.cosmetologist-change-city').toggleClass('active');
     });
 
-    $('.cosmetologist-change-city-list-item__link').on('click', function(e){
+    $('.cosmetologist-change-city-list-item').on('click', function (e) {
         e.preventDefault();
         $('.cosmetologist-change-city-list-item').removeClass('active');
-        $(this).parent().toggleClass('active');
+        $(this).toggleClass('active');
     })
 
     /**
      * Cosmetologist Open
      */
-    $('#open-modal-make').on('click', function(e) {
+    $('#open-modal-make').on('click', function (e) {
         e.preventDefault();
         $('.make-modal').addClass('modal-active animated bounceInUp').removeClass('bounceOutDown');
     });
 
-    $('.make-modal-close').on('click', function(e) {
+    $('.make-modal-close').on('click', function (e) {
         $('.make-modal').addClass('bounceOutDown');
-        setTimeout(function() {
+        setTimeout(function () {
             $('.make-modal').removeClass('modal-active bounceInUp');
         }, 500)
-        
+
     });
 
     /**
@@ -368,48 +368,95 @@ import 'flickity/dist/flickity.css';
 
     $('.product-card-desctiption-header-list').on('click', 'li:not(.active)', function () {
         $(this)
-          .addClass('active').siblings().removeClass('active')
-          .closest('.product-card-desctiption').find('.product-card-desctiption-body-item').removeClass('active').eq($(this).index()).addClass('active');
+            .addClass('active').siblings().removeClass('active')
+            .closest('.product-card-desctiption').find('.product-card-desctiption-body-item').removeClass('active').eq($(this).index()).addClass('active');
     });
 
-    if($(window).width() < 768) {
+    if ($(window).width() < 768) {
         $('.product-card-desctiption-body-item').addClass('active');
     }
+
+
+    $('#btn-question').on('click', function(e){
+        e.preventDefault();
+        $('.question-modal').addClass('modal-active animated bounceInUp').removeClass('bounceOutDown');
+    });
+
+    $('.question-modal-close').on('click', function (e) {
+        $('.question-modal').addClass('bounceOutDown');
+        setTimeout(function () {
+            $('.question-modal').removeClass('modal-active bounceInUp');
+        }, 500)
+
+    });
 
     /**
      * Form product value (Basket)
      */
 
     $('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
-    $('.quantity').each(function() {
-      var spinner = $(this),
-        input = spinner.find('input[type="number"]'),
-        btnUp = spinner.find('.quantity-up'),
-        btnDown = spinner.find('.quantity-down'),
-        min = input.attr('min'),
-        max = input.attr('max');
+    $('.quantity').each(function () {
+        var spinner = $(this),
+            input = spinner.find('input[type="number"]'),
+            btnUp = spinner.find('.quantity-up'),
+            btnDown = spinner.find('.quantity-down'),
+            min = input.attr('min'),
+            max = input.attr('max');
 
-      btnUp.click(function() {
-        var oldValue = parseFloat(input.val());
-        if (oldValue >= max) {
-          var newVal = oldValue;
-        } else {
-          var newVal = oldValue + 1;
-        }
-        spinner.find("input").val(newVal);
-        spinner.find("input").trigger("change");
-      });
+        btnUp.click(function () {
+            var oldValue = parseFloat(input.val());
+            if (oldValue >= max) {
+                var newVal = oldValue;
+            } else {
+                var newVal = oldValue + 1;
+            }
+            spinner.find("input").val(newVal);
+            spinner.find("input").trigger("change");
+        });
 
-      btnDown.click(function() {
-        var oldValue = parseFloat(input.val());
-        if (oldValue <= min) {
-          var newVal = oldValue;
-        } else {
-          var newVal = oldValue - 1;
+        btnDown.click(function () {
+            var oldValue = parseFloat(input.val());
+            if (oldValue <= min) {
+                var newVal = oldValue;
+            } else {
+                var newVal = oldValue - 1;
+            }
+            spinner.find("input").val(newVal);
+            spinner.find("input").trigger("change");
+        });
+
+    });
+
+    /**
+     * Scrol link
+     */
+    $(".scroll-link").on("click", function (event) {
+        event.preventDefault();
+
+        var id = $(this).attr('href');
+
+        if (id.length > 1) {
+
+            var top = $(id).offset().top;
+
+            $('body,html').animate({
+                scrollTop: top
+            }, 1500);
         }
-        spinner.find("input").val(newVal);
-        spinner.find("input").trigger("change");
-      });
+    });
+
+    /**
+     * Basket modal
+     */
+    $('#basket-open-btn').on('click', function() {
+        $('.basket-modal').addClass('modal-active animated bounceInUp').removeClass('bounceOutDown');
+    });
+
+    $('.basket-modal-nav-close').on('click', function (e) {
+        $('.basket-modal').addClass('bounceOutDown');
+        setTimeout(function () {
+            $('.make-modal').removeClass('modal-active bounceInUp');
+        }, 500)
 
     });
 

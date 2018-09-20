@@ -15,6 +15,10 @@
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 
+        <symbol id="basket-icon" viewBox="0 0 576 512">
+            <path d="M576 216v16c0 13.255-10.745 24-24 24h-8l-26.113 182.788C514.509 462.435 494.257 480 470.37 480H105.63c-23.887 0-44.139-17.565-47.518-41.212L32 256h-8c-13.255 0-24-10.745-24-24v-16c0-13.255 10.745-24 24-24h67.341l106.78-146.821c10.395-14.292 30.407-17.453 44.701-7.058 14.293 10.395 17.453 30.408 7.058 44.701L170.477 192h235.046L326.12 82.821c-10.395-14.292-7.234-34.306 7.059-44.701 14.291-10.395 34.306-7.235 44.701 7.058L484.659 192H552c13.255 0 24 10.745 24 24zM312 392V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm112 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm-224 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24z"></path>
+        </symbol>
+
         <symbol id="search-icon" viewBox="0 0 488.4 488.4">
             <path d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6
 			s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2
@@ -23,10 +27,8 @@
         </symbol>
 
         <symbol id="user-icon" viewBox="0 0 563.43 563.43">
-            <path d="M280.79,314.559c83.266,0,150.803-67.538,150.803-150.803S364.055,13.415,280.79,13.415S129.987,80.953,129.987,163.756  S197.524,314.559,280.79,314.559z M280.79,52.735c61.061,0,111.021,49.959,111.021,111.021S341.851,274.776,280.79,274.776  s-111.021-49.959-111.021-111.021S219.728,52.735,280.79,52.735z"
-            />
-            <path d="M19.891,550.015h523.648c11.102,0,19.891-8.789,19.891-19.891c0-104.082-84.653-189.198-189.198-189.198H189.198  C85.116,340.926,0,425.579,0,530.124C0,541.226,8.789,550.015,19.891,550.015z M189.198,380.708h185.034  c75.864,0,138.313,56.436,148.028,129.524H41.17C50.884,437.607,113.334,380.708,189.198,380.708z"
-            />
+            <path d="M280.79,314.559c83.266,0,150.803-67.538,150.803-150.803S364.055,13.415,280.79,13.415S129.987,80.953,129.987,163.756  S197.524,314.559,280.79,314.559z M280.79,52.735c61.061,0,111.021,49.959,111.021,111.021S341.851,274.776,280.79,274.776  s-111.021-49.959-111.021-111.021S219.728,52.735,280.79,52.735z" />
+            <path d="M19.891,550.015h523.648c11.102,0,19.891-8.789,19.891-19.891c0-104.082-84.653-189.198-189.198-189.198H189.198  C85.116,340.926,0,425.579,0,530.124C0,541.226,8.789,550.015,19.891,550.015z M189.198,380.708h185.034  c75.864,0,138.313,56.436,148.028,129.524H41.17C50.884,437.607,113.334,380.708,189.198,380.708z" />
         </symbol>
 
         <symbol id="facebook-icon" viewBox="0 0 448 512">
@@ -233,7 +235,8 @@
                 </div>
                 <div class="search d-flex align-items-center">
                     <form action="#" id="search-form">
-                        <input id="search-control" class="form-control position-relative" placeholder="поиск..." aria-label="поиск..." type="search">
+                        <input id="search-control" class="form-control position-relative" placeholder="поиск..."
+                            aria-label="поиск..." type="search">
                         <button class="search-btn position-absolute p-0 m-0" type="submit">
                             <svg width="25" height="25">
                                 <use xlink:href="#search-icon"></use>
@@ -251,6 +254,14 @@
                         <a href="#">
                             <svg width="25" height="25">
                                 <use xlink:href="#user-icon"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li id="basket-open-btn" class="social-list-item social-list-item--white social-list-item--user mr-3">
+                        <span class="basket-product-value">2</span>
+                        <a href="#">
+                            <svg width="25" height="25">
+                                <use xlink:href="#basket-icon"></use>
                             </svg>
                         </a>
                     </li>
@@ -287,6 +298,58 @@
                     <li class="phone-list-item mb-2"><a href="tel:+380800300850" class="phone-list-item__link text-white">0-800-300-850</a></li>
                     <li class="phone-list-item"><a href="tel:+380676221709" class="phone-list-item__link text-white">+380-67-622-17-09</a></li>
                 </ul>
+            </div>
+            <div class="basket-modal text-dark position-absolute">
+                <div class="basket-modal-header">
+                    <h4 class="basket-modal-header__title text-uppercase mb-4">товар добавлен в корзину</h4>
+                </div>
+                <div class="basket-modal-body">
+                    <div class="basket-modal-body-product-card d-flex">
+                        <div class="basket-modal-body-product-card__img" style="background-image: url('images/content/catalog/catalog-item-3.jpg');"></div>
+                        <div class="basket-modal-body-product-card-description ml-5">
+                            <div class="basket-modal-body-product-card-description__title">
+                                <span class="font-weight-normal">Ревитализирующий крем</span>
+                                <span class="font-weight-bold">DERMAHEAL VITALIZING CREAM</span>
+                                40 мл
+                            </div>
+                            <div class="basket-modal-body-product-card-description__price">
+                                <span class="font-weight-bold">900</span>
+                                <span class="font-weight-normal">грн</span>
+                            </div>
+                            <form action="#" id="form-product-value">
+                                <div class="quantity">
+                                    <input type="number" min="1" step="1" value="1" id="product-value">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-modal-footer">
+                    <div class="basket-modal-footer-result d-flex justify-content-between align-items-center">
+                        <div class="basket-modal-footer-result-item d-flex align-items-center">
+                            <div class="basket-modal-footer-result-item__text text-uppercase">Итого:</div>
+                            <div class="basket-modal-footer-result-item-value ml-1 ml-md-2 font-weight-normal">
+                                <span class="font-weight-bold">900</span>
+                                грн
+                            </div>
+                        </div>
+                        <div class="basket-modal-footer-result-item">
+                            <a href="#" class="btn btn-primary basket-modal-footer-result-item-btn">Оформить
+                                заказ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-modal-nav position-absolute">
+                    <div class="basket-modal-nav-close">
+                        <div class="line line--left"></div>
+                        <div class="line line--right"></div>
+                    </div>
+                    <div class="basket-modal-nav-onpage">
+                        <div class="basket-modal-nav-onpage-text text-uppercase">
+                            В корзину
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -347,7 +410,8 @@
                         <div class="header-banner-slider-item-content__decoration-title">С Flosal</div>
                         <div class="section-description">
                             <h2 class="section-description__title">Сочный август</h2>
-                            <div class="section-description__text">DERMAHEAL COSMECEUTICAL - биоревитализанты с глауроновой
+                            <div class="section-description__text">DERMAHEAL COSMECEUTICAL - биоревитализанты с
+                                глауроновой
                                 кислотой
                             </div>
                             <a href="#" class="btn btn-primary position-absolute">узнать больше</a>
@@ -374,7 +438,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="scroll-down position-absolute d-none d-sm-flex flex-column justify-content-center align-items-center">
+                    <a href="#catalog" class="scroll-down scroll-link position-absolute d-none d-sm-flex flex-column justify-content-center align-items-center">
                         <div class="scroll-down__text text-white">скролл вниз</div>
                         <div class="scroll-down-icon mb-2 position-relative">
                             <div class="scroll-down-icon__line position-absolute"></div>
@@ -472,7 +536,8 @@
                                     <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-5.jpg');"></div>
                                     <p class="catalog-item-description">
                                         Антицелюлитный крем для тела
-                                        <span class="font-weight-bold"> DERMAHEAL OBESSIA MASSAGE & SLIMMING CREAM </span>
+                                        <span class="font-weight-bold"> DERMAHEAL OBESSIA MASSAGE & SLIMMING CREAM
+                                        </span>
                                         (1000мл)
                                     </p>
                                     <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
@@ -526,7 +591,8 @@
                                     <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-2.jpg');"></div>
                                     <p class="catalog-item-description">
                                         Антицелюлитный крем для тела
-                                        <span class="font-weight-bold"> DERMAHEAL OBESSIA MASSAGE & SLIMMING CREAM </span>
+                                        <span class="font-weight-bold"> DERMAHEAL OBESSIA MASSAGE & SLIMMING CREAM
+                                        </span>
                                         (1000мл)
                                     </p>
                                     <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
@@ -580,7 +646,8 @@
                                     <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-2.jpg');"></div>
                                     <p class="catalog-item-description">
                                         Антицелюлитный крем для тела
-                                        <span class="font-weight-bold"> DERMAHEAL OBESSIA MASSAGE & SLIMMING CREAM </span>
+                                        <span class="font-weight-bold"> DERMAHEAL OBESSIA MASSAGE & SLIMMING CREAM
+                                        </span>
                                         (1000мл)
                                     </p>
                                     <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
@@ -778,7 +845,8 @@
                     <div class="text-uppercase text-white">flosal</div>
                     <div class="section-description">
                         <h3 class="section-description__title">СОЦИАЛЬНАЯ ИНИЦИАТИВА</h3>
-                        <div class="section-description__text text-white">Социальная инициатива Flosal “Чужих детей не бывает”.
+                        <div class="section-description__text text-white">Социальная инициатива Flosal “Чужих детей не
+                            бывает”.
                             Прими участие вместе с нами.</div>
                         <a href="#" class="btn btn-primary position-absolute">узнать больше</a>
                     </div>
@@ -798,7 +866,8 @@
                             <div class="news-item__img" style="background-image:url('images/content/news/news-item-1.jpg');"></div>
                             <div class="news-item-data">30 июля 2018</div>
                             <h4 class="news-item__title">Podilliya Medical Aesthetic Congress</h4>
-                            <p class="news-item-description">4-5 сентября 2018 в Виннице состоится 1-й международный конгресс
+                            <p class="news-item-description">4-5 сентября 2018 в Виннице состоится 1-й международный
+                                конгресс
                                 для врачей-косметологов</p>
                             <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
                         </div>
@@ -807,7 +876,8 @@
                         <div class="news-item news-item--column mb-1">
                             <div class="news-item-hover">
                                 <div class="news-item-data">30 июля 2018</div>
-                                <p class="news-item-description">4-5 сентября 2018 в Виннице состоится 1-й международный
+                                <p class="news-item-description">4-5 сентября 2018 в Виннице состоится 1-й
+                                    международный
                                     конгресс для врачей-косметологов</p>
                             </div>
                             <div class="news-item__img" style="background-image:url('images/content/news/news-item-2.jpg');"></div>
@@ -818,7 +888,8 @@
                             <div class="news-item-hover"></div>
                             <div class="news-item-data">30 июля 2018</div>
                             <h5 class="news-item__title">Podilliya Medical Aesthetic Congress</h5>
-                            <p class="news-item-description">4-5 сентября 2018 в Виннице состоится 1-й международный конгресс
+                            <p class="news-item-description">4-5 сентября 2018 в Виннице состоится 1-й международный
+                                конгресс
                                 для врачей-косметологов</p>
                             <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
                         </div>
@@ -830,7 +901,8 @@
                         <div class="news-item news-item--simple">
                             <div class="news-item-hover">
                                 <div class="news-item-data">30 июля 2018</div>
-                                <p class="news-item-description">4-5 сентября 2018 в Виннице состоится 1-й международный
+                                <p class="news-item-description">4-5 сентября 2018 в Виннице состоится 1-й
+                                    международный
                                     конгресс для врачей-косметологов</p>
                             </div>
                             <div class="news-item__img" style="background-image:url('images/content/news/news-item-3.jpg');"></div>
@@ -863,7 +935,8 @@
                     </div>
                     <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start">
                         <div class="ability-item text-dark">
-                            <div class="ability-item__description text-primary text-uppercase mb-3">НА САЙТЕ FLOSAL ВЫ МОЖЕТЕ</div>
+                            <div class="ability-item__description text-primary text-uppercase mb-3">НА САЙТЕ FLOSAL ВЫ
+                                МОЖЕТЕ</div>
                             <h4 class="ability-item__title text-uppercase mb-4">ЕСЛИ ВЫ КОСМЕТОЛОГ</h4>
                             <ol class="ability-item-list px-0">
                                 <li class="ability-item-list__item">Посетить семинар для косметологов</li>
@@ -878,7 +951,8 @@
                 <div class="row position-relative">
                     <div class="col-lg-6 d-flex justify-content-center order-2 order-lg-1">
                         <div class="ability-item text-dark">
-                            <div class="ability-item__description text-primary text-uppercase mb-3">НА САЙТЕ FLOSAL ВЫ МОЖЕТЕ</div>
+                            <div class="ability-item__description text-primary text-uppercase mb-3">НА САЙТЕ FLOSAL ВЫ
+                                МОЖЕТЕ</div>
                             <h4 class="ability-item__title text-uppercase mb-4">ЕСЛИ ВЫ ПАЦИЕНТ</h4>
                             <ol class="ability-item-list px-0">
                                 <li class="ability-item-list__item">Приобрести средства для домашнего ухода</li>
@@ -901,20 +975,29 @@
                 <div class="col-lg-9 mb-4">
                     <div class="about-item">
                         <h3 class="text-uppercase text-white mb-5">О МЕЖДУНАРОДНОМ ХОЛДИНГЕ FLOSAL</h3>
-                        <p class="about-description">Международный холдинг FloSal вот уже 15 лет – лидер в сфере инъекционных
-                            технологий. 15 лет мы успешно занимается распространением лучших в Мире инъекционных препаратов
-                            для эстетической медицины. Уколы красоты – наш приоритет. Также, FloSal представляет линейки
+                        <p class="about-description">Международный холдинг FloSal вот уже 15 лет – лидер в сфере
+                            инъекционных
+                            технологий. 15 лет мы успешно занимается распространением лучших в Мире инъекционных
+                            препаратов
+                            для эстетической медицины. Уколы красоты – наш приоритет. Также, FloSal представляет
+                            линейки
                             наружных средств, которые прекрасно дополняют инъекционные процедуры.</p>
 
-                        <p class="about-description">FloSal сотрудничает исключительно с надежными, проверенными поставщиками,
-                            которые имеют фармацевтическую специализацию и собственные научно-исследовательские лаборатории
-                            - это французская фармацевтическая компания Laboratoires Genevrier, компания SBS-MED (Франция)
+                        <p class="about-description">FloSal сотрудничает исключительно с надежными, проверенными
+                            поставщиками,
+                            которые имеют фармацевтическую специализацию и собственные научно-исследовательские
+                            лаборатории
+                            - это французская фармацевтическая компания Laboratoires Genevrier, компания SBS-MED
+                            (Франция)
                             и концерн Caregen (Южная Корея).
                         </p>
 
-                        <p class="about-description"> 15 лет FloSal идет в авангарде эстетической медицины, ведущие врачи
-                            международного холдинга FloSal посещают всемирные Конгрессы, Симпозиумы, Выставки. Мы первыми
-                            знакомим украинских врачей-косметологов с открытиями ведущих ученых из научных лабораторий мира.
+                        <p class="about-description"> 15 лет FloSal идет в авангарде эстетической медицины, ведущие
+                            врачи
+                            международного холдинга FloSal посещают всемирные Конгрессы, Симпозиумы, Выставки. Мы
+                            первыми
+                            знакомим украинских врачей-косметологов с открытиями ведущих ученых из научных лабораторий
+                            мира.
                         </p>
                         <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
                     </div>
@@ -1012,14 +1095,17 @@
                         <div class="decoration-line decoration-line--bottom position-absolute"></div>
                         <ul class="footer-item-list list-unstyled d-flex flex-column flex-xl-row justify-content-between mb-0">
                             <li class="footer-item-list-item"><a href="#" class="footer-itemlist-item__link">О НАС</a></li>
-                            <li class="footer-item-list-item"><a href="#" class="footer-itemlist-item__link">УЧЕБНЫЙ ЦЕНТР</a></li>
+                            <li class="footer-item-list-item"><a href="#" class="footer-itemlist-item__link">УЧЕБНЫЙ
+                                    ЦЕНТР</a></li>
                             <li class="footer-item-list-item"><a href="#" class="footer-itemlist-item__link">МЕТОДИКИ</a></li>
                             <li class="footer-item-list-item"><a href="#" class="footer-itemlist-item__link">ИНЪЕКЦИОННЫЕ
                                     ПРЕПАРАТЫ
                                 </a></li>
-                            <li class="footer-item-list-item"><a href="#" class="footer-itemlist-item__link">УХОДОВАЯ КОСМЕТИКА</a></li>
+                            <li class="footer-item-list-item"><a href="#" class="footer-itemlist-item__link">УХОДОВАЯ
+                                    КОСМЕТИКА</a></li>
                             <li class="footer-item-list-item"><a href="#" class="footer-itemlist-item__link">ПАЦИЕНТАМ</a></li>
-                            <li class="footer-item-list-item"><a href="#" class="footer-itemlist-item__link">ПРОЙТИ ПРОЦЕДУРУ</a></li>
+                            <li class="footer-item-list-item"><a href="#" class="footer-itemlist-item__link">ПРОЙТИ
+                                    ПРОЦЕДУРУ</a></li>
                         </ul>
                     </div>
                     <div class="footer-item d-flex flex-wrap justify-content-between align-items-center">
@@ -1069,7 +1155,8 @@
                 <div class="col-12">
                     <div class="footer-copyr py-3 text-center">
                         <p class="footer-copyr-text mb-0">2018 все права защещены</p>
-                        <p class="footer-copyr-text mb-0">Дизайн и разработка <span class="font-weight-bold">Impression Bureau</span></p>
+                        <p class="footer-copyr-text mb-0">Дизайн и разработка <span class="font-weight-bold">Impression
+                                Bureau</span></p>
                     </div>
                 </div>
             </div>

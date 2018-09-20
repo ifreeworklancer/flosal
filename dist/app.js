@@ -13070,8 +13070,8 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 (function () {
 
     /**
-    * Burger-menu
-    */
+     * Burger-menu
+     */
     $('.burger-menu').on('click', function () {
         var menu = $('.menu-nav');
         var logo = $('.logo');
@@ -13269,8 +13269,8 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
     });
 
     /**
-    * Form-label
-    */
+     * Form-label
+     */
     $('.form-control').on('focus', function () {
         $(this).parent().addClass('in-focus');
     });
@@ -13396,10 +13396,10 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
         $('.cosmetologist-change-city').toggleClass('active');
     });
 
-    $('.cosmetologist-change-city-list-item__link').on('click', function (e) {
+    $('.cosmetologist-change-city-list-item').on('click', function (e) {
         e.preventDefault();
         $('.cosmetologist-change-city-list-item').removeClass('active');
-        $(this).parent().toggleClass('active');
+        $(this).toggleClass('active');
     });
 
     /**
@@ -13428,6 +13428,18 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
     if ($(window).width() < 768) {
         $('.product-card-desctiption-body-item').addClass('active');
     }
+
+    $('#btn-question').on('click', function (e) {
+        e.preventDefault();
+        $('.question-modal').addClass('modal-active animated bounceInUp').removeClass('bounceOutDown');
+    });
+
+    $('.question-modal-close').on('click', function (e) {
+        $('.question-modal').addClass('bounceOutDown');
+        setTimeout(function () {
+            $('.question-modal').removeClass('modal-active bounceInUp');
+        }, 500);
+    });
 
     /**
      * Form product value (Basket)
@@ -13463,6 +13475,38 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
             spinner.find("input").val(newVal);
             spinner.find("input").trigger("change");
         });
+    });
+
+    /**
+     * Scrol link
+     */
+    $(".scroll-link").on("click", function (event) {
+        event.preventDefault();
+
+        var id = $(this).attr('href');
+
+        if (id.length > 1) {
+
+            var top = $(id).offset().top;
+
+            $('body,html').animate({
+                scrollTop: top
+            }, 1500);
+        }
+    });
+
+    /**
+     * Basket modal
+     */
+    $('#basket-open-btn').on('click', function () {
+        $('.basket-modal').addClass('modal-active animated bounceInUp').removeClass('bounceOutDown');
+    });
+
+    $('.basket-modal-nav-close').on('click', function (e) {
+        $('.basket-modal').addClass('bounceOutDown');
+        setTimeout(function () {
+            $('.make-modal').removeClass('modal-active bounceInUp');
+        }, 500);
     });
 })(jQuery);
 

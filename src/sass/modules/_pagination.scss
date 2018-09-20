@@ -8,6 +8,7 @@
         color: $dark;
         border-bottom: 2px solid transparent;
         transition: .5s;
+        opacity: .8;
 
         &.active {
             color: #fff;
@@ -16,6 +17,22 @@
 
         &:hover {
             border-color: $primary;
+            opacity: 1;
+        }
+    }
+
+    &-nav {
+
+        svg {
+            opacity: .7;
+            transition: .5s;
+        }
+
+        &:hover {
+
+            svg {
+                opacity: 1;
+            }
         }
     }
 }

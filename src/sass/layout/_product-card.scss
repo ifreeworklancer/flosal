@@ -1,5 +1,31 @@
 #product-card {
-    padding-top: 100px;   
+    padding-top: 100px;
+    
+    .question-modal {
+        @extend .make-modal;
+        bottom: 0;
+    
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+            left: 0;
+            max-width: 730px;
+        }
+    
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+            left: -40%;
+        }
+
+        &-close {
+            @extend .make-modal-close;
+        }
+
+        &-header {
+            @extend .make-modal-header;
+        }
+    
+        &-body {
+            @extend .make-modal-body;
+        }
+    }
 }
 
 .product-card-case {

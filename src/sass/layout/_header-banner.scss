@@ -13,7 +13,7 @@
         height: 100%;
         min-height: 600px;
     }
-    
+
     .scroll-down {
         left: 0;
         bottom: 100px;
@@ -35,8 +35,8 @@
             height: 40px;
             border-radius: 10px;
             border: 1px solid #fff;
-            
-            &__line {  
+
+            &__line {
                 top: 0;
                 left: 50%;
                 transform: translateX(-50%);
@@ -47,14 +47,16 @@
                 background-position: 0 -10px;
                 background-size: 100% 200%;
                 animation: scrollDown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
-                
+
                 @keyframes scrollDown {
                     0% {
                         background-position: 0 -10px;
                     }
+
                     75% {
                         background-position: 0 0;
                     }
+
                     100% {
                         background-position: 0 10px;
                     }
@@ -99,16 +101,19 @@
             font-size: 24px;
             opacity: .3;
         }
+
         &__title {
             text-transform: uppercase;
             font-weight: 600;
             margin-bottom: 0;
         }
+
         &-index {
             width: 200px;
             height: 100px;
             background-color: #000;
         }
+
         &:hover {
 
             .header-banner-slider-nav-item__img {
@@ -123,7 +128,7 @@
         @media (max-width: map_get($grid-breakpoints, sm)) {
             bottom: -75px;
         }
-        
+
         &__item {
             position: relative;
             font-size: 24px;
@@ -183,11 +188,12 @@
                 }
             }
         }
+
         &-right {
             @extend .header-banner-slider-nav-arrow-left;
         }
     }
-    
+
     &--select {
         top: auto;
         bottom: 100px;
@@ -224,12 +230,14 @@
             bottom: 100px;
             width: 90%;
             z-index: 9999;
+
             @media (min-width: map_get($grid-breakpoints, sm)) {
                 left: auto;
                 bottom: 190px;
                 right: 0;
                 width: 70%;
             }
+
             @media (min-width: map_get($grid-breakpoints, lg)) {
                 width: 50%;
             }

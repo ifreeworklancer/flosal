@@ -67,7 +67,7 @@
     pointer-events: none;
 
     @media (min-width: map_get($grid-breakpoints, sm)) {
-       left: 0;
+        left: 0;
     }
 
     @media (min-width: map_get($grid-breakpoints, lg)) {
@@ -78,10 +78,6 @@
     @media (min-width: map_get($grid-breakpoints, xl)) {
         left: 30%;
     }
-
-
-
-
 
     &.modal-active {
         opacity: 1;
@@ -138,7 +134,7 @@
 
         @media (max-width: map_get($grid-breakpoints, sm)) {
             max-width: 190px;
-         }
+        }
     }
 
     &-body {

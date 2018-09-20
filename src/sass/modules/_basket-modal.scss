@@ -1,0 +1,169 @@
+.basket-modal {
+    top: 90px;
+    right: 30px;
+    padding-top: 40px;
+    width: 100%;
+    max-width: 630px;
+    background-color: #fff;
+    border: 1px solid #b7b7b7;
+    z-index: 99999999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+
+    &.modal-active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .basket-modal-body-product-card {
+        margin-bottom: 20px;
+        padding-left: 20px;
+
+        form {
+            max-width: 90px;
+        }
+
+        &__img {
+            width: 220px;
+            padding-top: 200px;
+            @extend %img;
+        }
+
+        &-description {
+            max-width: 250px;
+
+            &__title {
+                position: relative;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 30px;
+                    height: 2px;
+                    background: $primary;
+                }
+            }
+
+            &__price {
+                margin-bottom: 20px;
+                font-size: 22px;
+                color: #9c9c9c;
+            }
+        }
+    }
+
+    .basket-modal-nav {
+        top: 0;
+        right: 0;
+        width: 70px;
+
+        &-close {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            background: #9c9c9c;
+            border: 1px solid #b7b7b7;
+            transition: .5s;
+            cursor: pointer;
+
+            .line {
+                position: absolute;
+                width: 30px;
+                height: 2px;
+                background-color: #c7c7c7;
+                top: 33px;
+                left: 20px;
+                transition: .5s;
+
+                &--left {
+                    transform: rotate(-45deg);
+                }
+
+                &--right {
+                    transform: rotate(45deg);
+                }
+            }
+
+            &:hover {
+                background: $danger;
+
+                .line {
+
+                    &--left {
+                        transform: rotate(45deg);
+                    }
+
+                    &--right {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+
+        &-onpage {
+            position: absolute;
+            top: 150px;
+            right: -80px;
+            transform: rotate(-90deg);
+            width: 230px;
+            height: 70px;
+            border: 1px solid #b7b7b7;
+            background: #f4f4f4;
+            cursor: pointer;
+
+            &-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 18px;
+                color: #9f9f9f;
+                width: 100px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 100%;
+                right: 0;
+                bottom: 0;
+                background: #b7b7b7;
+                transition: .5s;
+            }
+
+            &:hover {
+
+                &::before {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &-header {
+        padding-left: 30px;
+    }
+
+    &-footer {
+        padding-left: 40px;
+        border-top: 1px solid #b7b7b7;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -30px;
+        left: 13.5%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 22.5px 30px 22.5px;
+        border-color: transparent transparent #ffffff transparent;
+    }
+}

@@ -98,7 +98,7 @@
             font-size: 12px;
             border-bottom: 1px solid transparent;
             transition: .5s;
-            
+
             @media (min-width: map_get($grid-breakpoints, xl)) {
                 font-size: 14px;
             }
@@ -106,7 +106,7 @@
             &:hover {
                 border-bottom: 1px solid #fff;
             }
-        } 
+        }
     }
 
     &--main {
@@ -123,8 +123,8 @@
         .logo {
             width: 55%;
         }
-        
-        .search  {
+
+        .search {
             background-color: #ffedf6;
             width: 100%;
             max-width: none;
@@ -134,17 +134,18 @@
             }
 
             .form-control {
-    
+
                 &::-webkit-input-placeholder {
                     color: $primary;
                 }
+
                 &::-moz-placeholder {
                     color: $primary;
                 }
             }
 
             .search-btn {
-    
+
                 svg {
                     fill: $primary;
                 }
@@ -186,6 +187,16 @@
     padding-right: 35px;
 
     &-item {
+        position: relative;
+
+        .basket-product-value {
+            position: absolute;
+            top: -10px;
+            right: -5px;
+            font-size: 14px;
+            color: $primary;
+            font-weight: 700;
+        }
 
         &--dark {
 
@@ -225,24 +236,28 @@
                     fill: $primary;
                 }
             }
+
             &.social-list-item--facebook {
 
                 svg {
                     fill: #4267B2;
                 }
             }
+
             &.social-list-item--instagram {
 
                 svg {
                     fill: #D14F69;
                 }
             }
+
             &.social-list-item--youtube {
 
                 svg {
                     fill: #FF0101;
                 }
             }
+
             &.social-list-item--telegram {
 
                 svg {

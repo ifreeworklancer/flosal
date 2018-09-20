@@ -1,6 +1,7 @@
 #ability {
     padding-bottom: 60px;
 }
+
 .ability-img {
     @extend %pos;
     @extend %img;
@@ -36,7 +37,7 @@
         &__item {
             position: relative;
             padding-left: 50px;
-            list-style-type:none;
+            list-style-type: none;
             counter-increment: list;
             margin-bottom: 30px;
             font-size: 18px;
@@ -47,12 +48,13 @@
             }
 
             &::before {
-                content: "0" counter(list) " ";
+                content: "0"counter(list) " ";
                 position: absolute;
                 left: 10px;
                 color: $primary;
                 z-index: 3;
             }
+
             &::after {
                 content: '';
                 position: absolute;

@@ -2,12 +2,12 @@
     width: 100%;
 }
 
-.mCSB_inside > .mCSB_container {
+.mCSB_inside>.mCSB_container {
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
     margin-right: 0 !important;
-} 
+}
 
 .mCSB_dragger_bar {
     width: 3px !important;
@@ -23,7 +23,7 @@
     right: 0 !important;
     z-index: 99;
 
-    
+
     @media (max-width: map_get($grid-breakpoints, md)) {
         right: 20px !important;
     }

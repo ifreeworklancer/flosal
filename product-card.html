@@ -356,6 +356,35 @@
                             </div>
                             <div class="product-card-info-help">&#42; Количество товара можете изменить в корзине</div>
                         </div>
+
+                        <!-- Modal -->
+                        <div class="question-modal position-absolute">
+                            <div class="question-modal-close position-absolute">
+                                <div class="line line--left position-absolute"></div>
+                                <div class="line line--right position-absolute"></div>
+                            </div>
+                            <div class="question-modal-header">
+                                <h4 class="question-modal-header-title text-dark text-uppercase mb-0">записаться на прием</h4>
+                            </div>
+                            <div class="question-modal-body">
+                                <form id="form-question">
+                                    <div class="form-group position-relative mr-md-5">
+                                        <label for="question-user-name" class="label-placeholder position-absolute">Имя</label>
+                                        <input type="text" class="form-control position-relative" id="question-user-name">
+                                    </div>
+                                    <div class="form-group position-relative mr-md-5">
+                                        <label for="question-email" class="label-placeholder position-absolute">E-mail</label>
+                                        <input type="email" class="form-control position-relative" id="question-email">
+                                    </div>
+                                    <div class="form-group position-relative mb-5 mr-md-5">
+                                        <label for="question-user-phone" class="label-placeholder position-absolute">Телефон</label>
+                                        <input type="text" class="form-control position-relative" id="question-user-phone">
+                                    </div>
+                                    <button class="btn btn-primary text-white position-absolute">Записаться</button>
+                                </form>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -536,7 +565,7 @@
             </div>
         </section>
 
-        <!-- Promotional products -->
+        <!-- Recommended products -->
         <section id="recommended-products">
             <div class="container">
                 <div class="col-12 p-0">

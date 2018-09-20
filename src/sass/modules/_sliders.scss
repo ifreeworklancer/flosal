@@ -1,5 +1,5 @@
 .slider-onSecondaryPage {
-    
+
     .flickity-page-dots {
         bottom: -45px;
 
@@ -8,7 +8,7 @@
             border-radius: 0;
             transition: .5s;
             border: 1px solid $dark;
-                
+
             &.is-selected {
                 transform: rotate(-45deg);
                 background-color: $dark;
@@ -25,38 +25,34 @@
         }
     }
 
-    &--promotional {
 
-        .catalog-item {
-            width: 33.3333%;
-            margin: 0 2px;
-            padding-top: 170px; 
-            @media (max-width: map_get($grid-breakpoints, sm)) {
-                width: 100%;
-            }
-            
-            &-description {
-                margin-bottom: 120px;
-            }
+    .catalog-item {
+        width: 33.3333%;
+        margin: 0 2px;
+        padding-top: 170px;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            width: 100%;
+        }
+
+        &-description {
+            margin-bottom: 120px;
         }
     }
 
-    &--interesting {
 
-        .news-item {
-            position: relative;
-            width: 33.3333%;
-            margin: 0 2px;
-            @media (max-width: map_get($grid-breakpoints, sm)) {
-                width: 100%;
-            }
+
+    .news-item {
+        position: relative;
+        width: 33.3333%;
+        margin: 0 2px;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            width: 100%;
         }
     }
 
-    &--recommended { 
-        @extend .slider-onSecondaryPage--promotional;
 
-    }
 }
 
 .slider-onSecondaryPage-nav-arrow {
