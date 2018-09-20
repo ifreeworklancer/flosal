@@ -283,14 +283,6 @@
 
         }
         
-        .form-icon {
-
-            &--compulsory {
-                visibility: visible;
-                opacity: 1;
-            }
-        }
-        
         &.in-focus {
             opacity: 1;
         }
@@ -345,6 +337,11 @@
             
             &__text {
                 font-size: 14px;
+            }
+
+            &--compulsory {
+                visibility: visible;
+                opacity: 1;
             }
 
             &--file {

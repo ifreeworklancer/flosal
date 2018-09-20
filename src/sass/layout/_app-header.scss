@@ -118,20 +118,17 @@
 
         .burger-menu {
             width: 45%;
+            max-width: 100px;
         }
 
         .logo {
             width: 55%;
+            max-width: 150px;
         }
 
         .search {
-            background-color: #ffedf6;
             width: 100%;
             max-width: none;
-
-            @media (max-width: map_get($grid-breakpoints, lg)) {
-                width: 100%;
-            }
 
             .form-control {
 
@@ -150,6 +147,10 @@
                     fill: $primary;
                 }
             }
+
+            &::before {
+                background-color: rgba($secondary,.4);
+            }  
         }
 
         .phone-list {
@@ -171,8 +172,6 @@
 
         .social-list {
             background-color: #fff;
-            border-left: 1px solid rgba(#b7b7b7, .45);
-            border-right: 1px solid rgba(#b7b7b7, .45);
         }
 
         &::before {

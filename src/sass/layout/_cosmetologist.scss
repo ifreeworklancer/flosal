@@ -1,13 +1,13 @@
 #cosmetologist {
-    padding-top: 100px;
 
     .breadcrumbs {
-        position: relative;
+        top: 40px;
+        left: 0;
     }
 }
 
 .decoration-column {
-    top: 100px;
+    top: 0;
     left: 0;
     width: 100%;
     max-width: 200px;
@@ -28,6 +28,7 @@
 }
 
 .cosmetologist-change {
+    padding-top: 100px;
     
     .cosmetologist-change-city-title {
         color: #9f9e9e;

@@ -65,8 +65,8 @@
 
     </svg>
 
-    <!-- Header -->
-    <header id="app-header" class="app-header app-header--main">
+    <!-- Header  Secondary-->
+    <header id="app-header" class="app-header app-header--secondary">
         <div class="container-fluid px-0 d-flex flex-column flex-lg-row justify-content-between align-items-center">
             <div class="header-item d-flex justify-content-start align-items-center">
                 <div class="burger-menu d-flex flex-column justify-content-center align-items-center position-relative">
@@ -233,7 +233,7 @@
                     <a href="index.html"><img class="logo-icon logo-icon--primary position-absolute" src="images/icon/logo/logo-primary.png"
                             alt="Flosal Logo"></a>
                 </div>
-                <div class="search search--dark d-flex align-items-center">
+                <div class="search d-flex align-items-center">
                     <form action="#" id="search-form">
                         <input id="search-control" class="form-control position-relative" placeholder="поиск..."
                             aria-label="поиск..." type="search">
@@ -254,6 +254,14 @@
                         <a href="#">
                             <svg width="25" height="25">
                                 <use xlink:href="#user-icon"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li id="basket-open-btn" class="social-list-item social-list-item--dark social-list-item--user mr-3">
+                        <span class="basket-product-value">2</span>
+                        <a href="#">
+                            <svg width="25" height="25">
+                                <use xlink:href="#basket-icon"></use>
                             </svg>
                         </a>
                     </li>
@@ -286,14 +294,65 @@
                         </a>
                     </li>
                 </ul>
-                <ul class="phone-list text-center list-unstyled m-0 d-flex flex-column justify-content-center align-items-center bg-secondary">
+                <ul class="phone-list text-center list-unstyled m-0 d-flex flex-column justify-content-center align-items-center">
                     <li class="phone-list-item mb-2"><a href="tel:+380800300850" class="phone-list-item__link text-dark">0-800-300-850</a></li>
                     <li class="phone-list-item"><a href="tel:+380676221709" class="phone-list-item__link text-dark">+380-67-622-17-09</a></li>
                 </ul>
             </div>
+            <div class="basket-modal text-dark position-absolute">
+                <div class="basket-modal-header">
+                    <h4 class="basket-modal-header__title text-uppercase mb-4">товар добавлен в корзину</h4>
+                </div>
+                <div class="basket-modal-body">
+                    <div class="basket-modal-body-product-card d-flex">
+                        <div class="basket-modal-body-product-card__img" style="background-image: url('images/content/catalog/catalog-item-3.jpg');"></div>
+                        <div class="basket-modal-body-product-card-description ml-5">
+                            <div class="basket-modal-body-product-card-description__title">
+                                <span class="font-weight-normal">Ревитализирующий крем</span>
+                                <span class="font-weight-bold">DERMAHEAL VITALIZING CREAM</span>
+                                40 мл
+                            </div>
+                            <div class="basket-modal-body-product-card-description__price">
+                                <span class="font-weight-bold">900</span>
+                                <span class="font-weight-normal">грн</span>
+                            </div>
+                            <form action="#" id="form-product-value">
+                                <div class="quantity">
+                                    <input type="number" min="1" step="1" value="1" id="product-value">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-modal-footer">
+                    <div class="basket-modal-footer-result d-flex justify-content-between align-items-center">
+                        <div class="basket-modal-footer-result-item d-flex align-items-center">
+                            <div class="basket-modal-footer-result-item__text text-uppercase">Итого:</div>
+                            <div class="basket-modal-footer-result-item-value ml-1 ml-md-2 font-weight-normal">
+                                <span class="font-weight-bold">900</span>
+                                грн
+                            </div>
+                        </div>
+                        <div class="basket-modal-footer-result-item">
+                            <a href="#" class="btn btn-primary basket-modal-footer-result-item-btn">Оформить
+                                заказ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-modal-nav position-absolute">
+                    <div class="basket-modal-nav-close">
+                        <div class="line line--left"></div>
+                        <div class="line line--right"></div>
+                    </div>
+                    <div class="basket-modal-nav-onpage">
+                        <div class="basket-modal-nav-onpage-text text-uppercase">
+                            В корзину
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
-
 
     <main>
 
@@ -304,7 +363,7 @@
                 <div class="decoration-column-img d-none d-lg-block" style="background-image:url('images/content/catalog/decoration-item-2.jpg');"></div>
             </div>
 
-            <div class="container">
+            <div class="container position-relative">
 
                 <div class="breadcrumbs">
                     <div class="row w-100 m-0 p-0">
@@ -321,8 +380,8 @@
                     </div>
                 </div>
 
-                <div class="row mt-5">
-                    <div class="col-12 pl-4">
+                <div class="row">
+                    <div class="col-12 pl-5">
                         <div class="cosmetologist-change d-flex flex-column flex-md-row justify-content-between">
                             <div class="cosmetologist-change-item mb-4 mb-md-0">
                                 <div class="cosmetologist-change-city-title">Выберите косметолога в Вашем

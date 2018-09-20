@@ -200,14 +200,14 @@ sup {
 }
 
 a {
-  color: #74686f;
+  color: #5e193f;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #4c4448;
+  color: #220917;
   text-decoration: none;
 }
 
@@ -3127,12 +3127,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #74686f;
+  color: #5e193f;
   background-color: transparent;
 }
 
 .btn-link:hover {
-  color: #4c4448;
+  color: #220917;
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
@@ -5035,14 +5035,14 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: 0;
   line-height: 1.25;
-  color: #74686f;
+  color: #5e193f;
   background-color: #fff;
   border: 0 solid #dee2e6;
 }
 
 .page-link:hover {
   z-index: 2;
-  color: #4c4448;
+  color: #220917;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;
@@ -10126,11 +10126,6 @@ section {
   opacity: 1;
 }
 
-#form-login .form-group .form-icon--compulsory, #form-singup .form-group .form-icon--compulsory {
-  visibility: visible;
-  opacity: 1;
-}
-
 #form-login .form-group.in-focus, #form-singup .form-group.in-focus {
   opacity: 1;
 }
@@ -10189,6 +10184,11 @@ section {
 
 #form-login .form-group .form-icon__text, #form-singup .form-group .form-icon__text {
   font-size: 14px;
+}
+
+#form-login .form-group .form-icon--compulsory, #form-singup .form-group .form-icon--compulsory {
+  visibility: visible;
+  opacity: 1;
 }
 
 #form-login .form-group .form-icon--file, #form-singup .form-group .form-icon--file {
@@ -11270,22 +11270,17 @@ section {
 
 .app-header--secondary .burger-menu {
   width: 45%;
+  max-width: 100px;
 }
 
 .app-header--secondary .logo {
   width: 55%;
+  max-width: 150px;
 }
 
 .app-header--secondary .search {
-  background-color: #ffedf6;
   width: 100%;
   max-width: none;
-}
-
-@media (max-width: 992px) {
-  .app-header--secondary .search {
-    width: 100%;
-  }
 }
 
 .app-header--secondary .search .form-control::-webkit-input-placeholder {
@@ -11298,6 +11293,10 @@ section {
 
 .app-header--secondary .search .search-btn svg {
   fill: #5e193f;
+}
+
+.app-header--secondary .search::before {
+  background-color: rgba(248, 247, 247, 0.4);
 }
 
 .app-header--secondary .phone-list {
@@ -11316,8 +11315,6 @@ section {
 
 .app-header--secondary .social-list {
   background-color: #fff;
-  border-left: 1px solid rgba(183, 183, 183, 0.45);
-  border-right: 1px solid rgba(183, 183, 183, 0.45);
 }
 
 .app-header--secondary::before {
@@ -11488,7 +11485,7 @@ section {
 
 .header-banner-slider-nav-item {
   width: 100%;
-  padding: 155px 15px 25px 30px;
+  padding: 110px 15px 25px 30px;
   font-weight: normal;
   overflow: hidden;
 }
@@ -12577,7 +12574,7 @@ section {
 }
 
 #singup {
-  padding: 150px 0 50px;
+  padding: 150px 0;
   background-color: #eee9ec;
 }
 
@@ -12587,14 +12584,6 @@ section {
 
 .singup-help-item {
   color: #b99eac;
-}
-
-#news-page {
-  padding-top: 100px;
-}
-
-#news-open {
-  padding-top: 100px;
 }
 
 #news-open .news-item {
@@ -12648,16 +12637,13 @@ section {
   margin-bottom: 120px;
 }
 
-#cosmetologist {
-  padding-top: 100px;
-}
-
 #cosmetologist .breadcrumbs {
-  position: relative;
+  top: 40px;
+  left: 0;
 }
 
 .decoration-column {
-  top: 100px;
+  top: 0;
   left: 0;
   width: 100%;
   max-width: 200px;
@@ -12678,6 +12664,10 @@ section {
 .decoration-column-img {
   padding-top: 850px;
   z-index: 20;
+}
+
+.cosmetologist-change {
+  padding-top: 100px;
 }
 
 .cosmetologist-change .cosmetologist-change-city-title {
@@ -12848,10 +12838,6 @@ section {
   border-color: transparent transparent transparent #fff;
 }
 
-#cosmetologist-open {
-  padding-top: 100px;
-}
-
 #cosmetologist-open .breadcrumbs {
   top: -50px;
 }
@@ -13008,10 +12994,6 @@ section {
 .make-modal-body .btn, #product-card .question-modal-body .btn {
   right: -1px;
   bottom: -1px;
-}
-
-#product-card {
-  padding-top: 100px;
 }
 
 #product-card .question-modal {
@@ -13194,10 +13176,6 @@ section {
 #recommended-products {
   margin-top: 60px;
   margin-bottom: 120px;
-}
-
-#basket {
-  padding-top: 100px;
 }
 
 .basket-item {
