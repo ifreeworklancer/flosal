@@ -13417,6 +13417,11 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
         }, 500);
     });
 
+    $('[data-openMakeModal]').on('click', function (e) {
+        e.preventDefault();
+        $('.make-modal').addClass('modal-active animated bounceInUp').removeClass('bounceOutDown');
+    });
+
     /**
      * Tabs product card 
      */

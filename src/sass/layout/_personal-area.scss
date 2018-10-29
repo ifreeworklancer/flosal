@@ -1,0 +1,58 @@
+#personal-area {
+    padding: 60px 0;
+
+    .breadcrumbs {
+        top: -50px;
+        left: -30px;
+    }
+}
+
+.personal-area-tabs {
+    color: #acabab;
+
+    &-item {
+
+        &-header {
+            position: relative;
+            padding: 20px 0;
+            background: #f3f3f3;
+
+            &::before {
+                content: '';
+                @extend %pos;
+                left: -40px;
+                background: #f3f3f3;
+                z-index: -4;
+            }
+
+            &__title {
+                font-size: 14px;
+            }
+        }
+
+        &-body {
+            margin: 20px 0;
+
+            .personal-area-main-data {
+
+                &-info {
+                    margin-left: 20px;
+                    font-weight: bold;
+
+                    &__name {
+                        color: $dark;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &-info-sale {
+                display: inline-block;
+                padding: 15px;
+                font-size: 14px;
+                background: $primary;
+                color: #fff;
+            }
+        }
+    }
+}

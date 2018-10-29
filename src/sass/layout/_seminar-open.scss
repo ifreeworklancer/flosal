@@ -1,0 +1,67 @@
+#seminar-open {
+    padding: 160px 0 80px;
+    background: #f6f6f6;
+    overflow: hidden;
+    z-index: 3;
+
+    .seminar-header-banner {
+        @extend %pos;
+        bottom: auto;
+        padding-top: 500px;
+        @extend %img;
+        z-index: -5;
+    }
+
+    .breadcrumbs {
+        top: -90px;
+        left: -30px;
+    }
+
+    .section-title {
+        position: relative;
+        margin: 20px;
+        padding: 40px 0;
+        font-size: 24px;
+
+        &::before {
+            content: '';
+            @extend %pos;
+            left: -200px;
+            background: rgba(#fff, .3);
+            z-index: -3;
+        }
+    }
+
+    .cosmetologist-card {
+        margin-top: -120px;
+
+        @media (max-width: map_get($grid-breakpoints, lg)) {
+            margin-top: 40px;
+        }
+
+        &-description {
+            padding-bottom: 20px;
+            border-bottom: 1px solid $primary;
+        }
+    }
+}
+
+.seminar-open-content {
+    margin-top: 140px;
+}
+
+.seminar-open-item {
+    margin-bottom: 75px;
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &-list {
+        margin: 0;
+
+        &-cell {
+            margin-bottom: 20px;
+        }
+    }
+}

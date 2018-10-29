@@ -362,6 +362,11 @@ import 'flickity/dist/flickity.css';
 
     });
 
+    $('[data-openMakeModal]').on('click', function (e) {
+        e.preventDefault();
+        $('.make-modal').addClass('modal-active animated bounceInUp').removeClass('bounceOutDown');
+    })
+
     /**
      * Tabs product card 
      */
@@ -377,7 +382,7 @@ import 'flickity/dist/flickity.css';
     }
 
 
-    $('#btn-question').on('click', function(e){
+    $('#btn-question').on('click', function (e) {
         e.preventDefault();
         $('.question-modal').addClass('modal-active animated bounceInUp').removeClass('bounceOutDown');
     });
@@ -448,7 +453,7 @@ import 'flickity/dist/flickity.css';
     /**
      * Basket modal
      */
-    $('#basket-open-btn').on('click', function() {
+    $('#basket-open-btn').on('click', function () {
         $('.basket-modal').addClass('modal-active animated bounceInUp').removeClass('bounceOutDown');
     });
 
