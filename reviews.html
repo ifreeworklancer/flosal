@@ -458,8 +458,8 @@
 
     <main>
 
-        <!-- Personal Area -->
-        <section id="personal-area">
+        <!-- Reviews page -->
+        <section id="reviews-page">
 
             <div class="decoration-column position-absolute">
                 <div class="decoration-column-img d-none d-lg-block" style="background-image:url('images/content/catalog/decoration-item-2.jpg');"></div>
@@ -475,7 +475,7 @@
                                     <a href="#" class="breadcrumbs-list-item__link position-relative">Главная</a>
                                 </li>
                                 <li class="breadcrumbs-list-item position-relative ml-1">
-                                    <a href="#" class="breadcrumbs-list-item__link position-relative">Личный кабинет</a>
+                                    <a href="#" class="breadcrumbs-list-item__link position-relative">Отзывы</a>
                                 </li>
                             </ul>
                         </div>
@@ -484,160 +484,153 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <div class="personal-area-tabs">
-                            <div class="personal-area-tabs-item">
-                                <div class="personal-area-tabs-item-header-statick">
-                                    <div class="personal-area-tabs-item-header-statick__title">
-                                        Личный кабинет пользователя
-
+                        <div class="reviews-page-header-description d-flex justify-content-between align-items-center mb-5">
+                            <h2 class="section-title text-dark text-uppercase">
+                                Отзывы
+                            </h2>
+                            <a href="#" class="btn btn-primary">оставить отзыв</a>
+                        </div>
+                        <div class="reviews-page-content">
+                            <div class="reviews-page-item">
+                                <div class="reviews-page-item-data">
+                                    <div class="reviews-page-item-data-avatar">
+                                        <svg width="80" height="70">
+                                            <use xlink:href="#avatar-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews-page-item-data-info">
+                                        <h5 class="reviews-page-item-data-info__name">
+                                            Александр Пушкин
+                                        </h5>
+                                        <div class="reviews-page-item-data-info__data">
+                                            13 ноября 2018
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="personal-area-tabs-item-body d-flex flex-column flex-sm-row justify-content-between align-items-end">
-                                    <div class="personal-area-main-data d-flex align-items-center">
-                                        <div class="personal-area-main-data__avatar mb-4 mb-sm-0">
-                                            <svg width="80" height="70">
-                                                <use xlink:href="#avatar-icon"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="personal-area-main-data-info">
-                                            <h5 class="personal-area-main-data-info__name">Александр Пушкин</h5>
-                                            <div class="personal-area-main-data-info__email">alex_pushkin@gmail.com</div>
-                                        </div>
-                                    </div>
-                                    <div class="personal-area-tabs-item-body-info-sale">
-                                        Ваша персональная скидка 5%
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="personal-area-tabs-item">
-                                <div class="personal-area-tabs-item-header">
-                                    <div class="personal-area-tabs-item-header__title">
-                                        Редактировать личные данные
-                                    </div>
-                                </div>
-                                <div class="personal-area-tabs-item-body">
-                                    <form id="form-singup">
-                                        <div class="form-group position-relative text-primary mb-4">
-                                            <label for="singup-name" class="label-placeholder position-absolute">Имя</label>
-                                            <input type="text" class="form-control py-2 pl-0 pr-3" id="singup-name">
-                                        </div>
-                                        <div class="form-group position-relative text-primary mb-4">
-                                            <label for="singup-email" class="label-placeholder position-absolute">Email</label>
-                                            <input type="email" class="form-control py-2 pl-0 pr-3" id="singup-email">
-                                        </div>
-                                        <div class="form-group position-relative text-primary mb-4">
-                                            <label for="singup-phone" class="label-placeholder position-absolute">Номер
-                                                телефона</label>
-                                            <input type="text" class="form-control py-2 pl-0 pr-3" id="singup-phone">
-                                        </div>
-                                        <div class="form-group position-relative text-primary mb-4">
-                                            <label for="singup-password" class="label-placeholder position-absolute">Введите
-                                                пароль</label>
-                                            <input type="password" class="form-control py-2 pl-0 pr-3" id="singup-password">
-                                        </div>
-                                        <div class="form-group position-relative text-primary mb-4">
-                                            <label for="singup-confirmPassword" class="label-placeholder position-absolute">Подтвердите
-                                                пароль</label>
-                                            <input type="password" class="form-control py-2 pl-0 pr-3" id="singup-confirmPassword">
-                                        </div>
-                                        <div class="form-group position-relative text-primary mb-4">
-                                            <label for="singup-aboutMe" class="label-placeholder position-absolute">О
-                                                себе</label>
-                                            <textarea class="form-control py-2 pl-0 pr-3" id="singup-aboutMe" rows="1"></textarea>
-                                        </div>
-                                        <div class="form-group form-check text-primary mb-2">
-                                            <input type="checkbox" class="form-check-input" id="singup-cosmetologist">
-                                            <label class="form-check-label font-weight-normal" for="singup-cosmetologist">Я
-                                                косметолог</label>
-                                            <div class="form-icon form-icon--file position-absolute d-flex">
-                                                <input type="file" class="form-file-input" id="singup-file">
-                                                <label class="form-file-label position-relative" for="singup-file" id="singup-file-label">
-                                                    Прикрепить файл
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-check text-primary mb-4">
-                                            <input type="checkbox" class="form-check-input" id="singup-checkme">
-                                            <label class="form-check-label font-weight-normal" for="singup-checkme">Запомнить
-                                                меня</label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary text-capitalize py-2">Редактировать</button>
-                                    </form>
+                                <div class="reviews-page-item-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </div>
                             </div>
-                            <div class="personal-area-tabs-item">
-                                <div class="personal-area-tabs-item-header">
-                                    <div class="personal-area-tabs-item-header__title">
-                                        История покупок
+                            <div class="reviews-page-item">
+                                <div class="reviews-page-item-data">
+                                    <div class="reviews-page-item-data-avatar reviews-page-item-data-avatar--facebook">
+                                        <div class="reviews-page-item-data-avatar-img" style="background-image: url(images/content/reviews/reviews-page-item-1.jpg);"></div>
+                                        <svg width="25" height="25" class="reviews-page-item-data-avatar-icon reviews-page-item-data-avatar-icon--facebook">
+                                            <use xlink:href="#facebook-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews-page-item-data-info">
+                                        <h5 class="reviews-page-item-data-info__name">
+                                            Анастасия
+                                            Белик-Зильберштейн
+                                        </h5>
+                                        <div class="reviews-page-item-data-info__data">
+                                            13 ноября 2018
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="personal-area-tabs-item-body">
-                                    <table class="table personal-area-table table-responsive-sm">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Товар</th>
-                                                <th scope="col">Дата</th>
-                                                <th scope="col">Статус</th>
-                                                <th scope="col">Сумма</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    Ревитализирующий крем
-                                                    <div class="font-weight-bold">
-                                                        DERMAHEAL VITALIZING CREAM
-                                                    </div>
-                                                    40 мл
-                                                </td>
-                                                <td>
-                                                    13 сентября 2018
-                                                </td>
-                                                <td>
-                                                    Косметолог
-                                                </td>
-                                                <td>
-                                                    <span class="font-weight-bold">1249</span> грн
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Ревитализирующий крем
-                                                    <div class="font-weight-bold">
-                                                        DERMAHEAL VITALIZING CREAM
-                                                    </div>
-                                                    40 мл
-                                                </td>
-                                                <td>
-                                                    13 сентября 2018
-                                                </td>
-                                                <td>
-                                                    Косметолог
-                                                </td>
-                                                <td>
-                                                    <span class="font-weight-bold">1249</span> грн
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Ревитализирующий крем
-                                                    <div class="font-weight-bold">
-                                                        DERMAHEAL VITALIZING CREAM
-                                                    </div>
-                                                    40 мл
-                                                </td>
-                                                <td>
-                                                    13 сентября 2018
-                                                </td>
-                                                <td>
-                                                    Косметолог
-                                                </td>
-                                                <td>
-                                                    <span class="font-weight-bold">1249</span> грн
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="reviews-page-item-description">
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                                    qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                                    numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                                    voluptatem.
+                                </div>
+                            </div>
+                            <div class="reviews-page-item">
+                                <div class="reviews-page-item-data">
+                                    <div class="reviews-page-item-data-avatar">
+                                        <div class="reviews-page-item-data-avatar-img" style="background-image: url(images/content/reviews/reviews-page-item-1.jpg);"></div>
+                                    </div>
+                                    <div class="reviews-page-item-data-info">
+                                        <h5 class="reviews-page-item-data-info__name">
+                                            Елена Соловей
+                                        </h5>
+                                        <div class="reviews-page-item-data-info__data">
+                                            13 ноября 2018
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews-page-item-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                            <div class="reviews-page-item">
+                                <div class="reviews-page-item-data">
+                                    <div class="reviews-page-item-data-avatar">
+                                        <svg width="80" height="70">
+                                            <use xlink:href="#avatar-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews-page-item-data-info">
+                                        <h5 class="reviews-page-item-data-info__name">
+                                            Александр Пушкин
+                                        </h5>
+                                        <div class="reviews-page-item-data-info__data">
+                                            13 ноября 2018
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews-page-item-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                            <div class="reviews-page-item">
+                                <div class="reviews-page-item-data">
+                                    <div class="reviews-page-item-data-avatar reviews-page-item-data-avatar--facebook">
+                                        <div class="reviews-page-item-data-avatar-img" style="background-image: url(images/content/reviews/reviews-page-item-1.jpg);"></div>
+                                        <svg width="25" height="25" class="reviews-page-item-data-avatar-icon reviews-page-item-data-avatar-icon--facebook">
+                                            <use xlink:href="#facebook-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews-page-item-data-info">
+                                        <h5 class="reviews-page-item-data-info__name">
+                                            Анастасия
+                                            Белик-Зильберштейн
+                                        </h5>
+                                        <div class="reviews-page-item-data-info__data">
+                                            13 ноября 2018
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews-page-item-description">
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                                    qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                                    numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                                    voluptatem.
+                                </div>
+                            </div>
+                            <div class="reviews-page-item">
+                                <div class="reviews-page-item-data">
+                                    <div class="reviews-page-item-data-avatar">
+                                        <div class="reviews-page-item-data-avatar-img" style="background-image: url(images/content/reviews/reviews-page-item-1.jpg);"></div>
+                                    </div>
+                                    <div class="reviews-page-item-data-info">
+                                        <h5 class="reviews-page-item-data-info__name">
+                                            Елена Соловей
+                                        </h5>
+                                        <div class="reviews-page-item-data-info__data">
+                                            13 ноября 2018
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews-page-item-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </div>
                             </div>
                         </div>
@@ -645,165 +638,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Recommended products -->
-        <section id="recommended-products">
-                <div class="container">
-                    <div class="col-12 p-0">
-                        <h3 class="section-title text-dark text-uppercase mb-5">Акционные товары</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="slider-onSecondaryPage slider-onSecondaryPage--recommended">
-                                <div class="slider-onSecondaryPage-row slider-onSecondaryPage-row--recommended">
-    
-                                    <div class="catalog-item catalog-item--small catalog-item--dark">
-                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-9.jpg');"></div>
-                                        <p class="catalog-item-description">
-                                            Очищающий гель
-                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
-                                        </p>
-                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
-                                                грн</s></div>
-                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
-                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
-                                        <div class="catalog-item__promotional">Акция</div>
-                                    </div>
-    
-    
-                                    <div class="catalog-item catalog-item--small catalog-item--dark">
-                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-7.jpg');"></div>
-                                        <p class="catalog-item-description">
-                                            Очищающий гель
-                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
-                                        </p>
-                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
-                                                грн</s></div>
-                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
-                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
-                                        <div class="catalog-item__promotional">Акция</div>
-                                    </div>
-    
-                                    <div class="catalog-item catalog-item--small catalog-item--dark">
-                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-5.jpg');"></div>
-                                        <p class="catalog-item-description">
-                                            Очищающий гель
-                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
-                                        </p>
-                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
-                                                грн</s></div>
-                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
-                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
-                                        <div class="catalog-item__promotional">Акция</div>
-                                    </div>
-    
-                                </div>
-                                <div class="slider-onSecondaryPage-row slider-onSecondaryPage-row--recommended">
-    
-                                    <div class="catalog-item catalog-item--small catalog-item--dark">
-                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-9.jpg');"></div>
-                                        <p class="catalog-item-description">
-                                            Очищающий гель
-                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
-                                        </p>
-                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
-                                                грн</s></div>
-                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
-                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
-                                        <div class="catalog-item__promotional">Акция</div>
-                                    </div>
-    
-    
-                                    <div class="catalog-item catalog-item--small catalog-item--dark">
-                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-7.jpg');"></div>
-                                        <p class="catalog-item-description">
-                                            Очищающий гель
-                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
-                                        </p>
-                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
-                                                грн</s></div>
-                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
-                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
-                                        <div class="catalog-item__promotional">Акция</div>
-                                    </div>
-    
-                                    <div class="catalog-item catalog-item--small catalog-item--dark">
-                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-5.jpg');"></div>
-                                        <p class="catalog-item-description">
-                                            Очищающий гель
-                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
-                                        </p>
-                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
-                                                грн</s></div>
-                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
-                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
-                                        <div class="catalog-item__promotional">Акция</div>
-                                    </div>
-    
-                                </div>
-                                <div class="slider-onSecondaryPage-row slider-onSecondaryPage-row--recommended">
-    
-                                    <div class="catalog-item catalog-item--small catalog-item--dark">
-                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-9.jpg');"></div>
-                                        <p class="catalog-item-description">
-                                            Очищающий гель
-                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
-                                        </p>
-                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
-                                                грн</s></div>
-                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
-                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
-                                        <div class="catalog-item__promotional">Акция</div>
-                                    </div>
-    
-    
-                                    <div class="catalog-item catalog-item--small catalog-item--dark">
-                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-7.jpg');"></div>
-                                        <p class="catalog-item-description">
-                                            Очищающий гель
-                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
-                                        </p>
-                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
-                                                грн</s></div>
-                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
-                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
-                                        <div class="catalog-item__promotional">Акция</div>
-                                    </div>
-    
-                                    <div class="catalog-item catalog-item--small catalog-item--dark">
-                                        <div class="catalog-item__img" style="background-image:url('images/content/catalog/catalog-item-5.jpg');"></div>
-                                        <p class="catalog-item-description">
-                                            Очищающий гель
-                                            <span class="font-weight-bold">DERMAHEAL A.A AQUA CLEANSER</span> (100мл)
-                                        </p>
-                                        <div class="catalog-item__old-price"><s><span class="font-weight-bold">349</span>
-                                                грн</s></div>
-                                        <div class="catalog-item__new-price"><span class="font-weight-bold">229</span> грн</div>
-                                        <div class="more-info"><a href="#" class="more-info__link">Подробнее</a></div>
-                                        <div class="catalog-item__promotional">Акция</div>
-                                    </div>
-    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 d-flex justify-content-end">
-                            <div class="slider-onSecondaryPage-nav-arrow slider-onSecondaryPage-nav-arrow--recommended d-flex position-absolute">
-                                <div class="slider-onSecondaryPage-nav-arrow-left slider-onSecondaryPage-nav-arrow-left--recommended mr-3">
-                                    <svg width="25" height="20">
-                                        <use xlink:href="#arrow-left-icon"></use>
-                                    </svg></div>
-                                <div class="slider-onSecondaryPage-nav-arrow-right slider-onSecondaryPage-nav-arrow-right--recommended">
-                                    <svg width="25" height="20">
-                                        <use xlink:href="#arrow-right-icon"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
     </main>
 

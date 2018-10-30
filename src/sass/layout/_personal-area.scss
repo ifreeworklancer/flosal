@@ -11,11 +11,15 @@
     color: #acabab;
 
     &-item {
+        margin-bottom: 4px;
+
 
         &-header {
             position: relative;
             padding: 20px 0;
             background: #f3f3f3;
+            cursor: pointer;
+            transition: .5s;
 
             &::before {
                 content: '';
@@ -25,13 +29,66 @@
                 z-index: -4;
             }
 
+            &.active {
+
+                .personal-area-tabs-item-header__title {
+                    
+                    &::before {
+
+                        border-width: 0 6px 7px 6px;
+                        border-color: transparent transparent #acabab transparent;
+                    }
+                }
+            }
+
             &__title {
+                position: relative;
+                display: inline-block;
+                padding-right: 20px;
                 font-size: 14px;
+                padding-left: 30px;
+
+                @media (max-width: map_get($grid-breakpoints, sm)) {
+                    padding-left: 0;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 7px 6px 0 6px;
+                    border-color: #acabab transparent transparent transparent;
+                    transition: .5s;
+                }
+            }
+        }
+
+        &-header-statick {
+            @extend .personal-area-tabs-item-header;
+            cursor: auto;
+
+            &__title {
+                padding-left: 30px;
+
+                @media (max-width: map_get($grid-breakpoints, sm)) {
+                    padding-left: 0;
+                }
             }
         }
 
         &-body {
             margin: 20px 0;
+            padding-left: 30px;
+            display: none;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                padding-left: 0;
+            }
 
             .personal-area-main-data {
 
@@ -54,5 +111,20 @@
                 color: #fff;
             }
         }
+    }
+}
+
+.personal-area-table {
+
+    th {
+        border: none !important;
+        font-weight: 300;
+        color: #acacac;
+    }
+
+    td {
+        border-top: none;
+        border-bottom: 1px solid #f0f0f0;
+        color: $dark;
     }
 }

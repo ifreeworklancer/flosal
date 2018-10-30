@@ -149,6 +149,11 @@ import 'flickity/dist/flickity.css';
         });
     }
 
+    $('.reviews-page-content').mCustomScrollbar({
+        axis: "y",
+        setHeight: 520
+    });
+
     $('.cosmetologist-change-city-scrollbar').mCustomScrollbar({
         axis: "y",
         setHeight: 400
@@ -394,6 +399,14 @@ import 'flickity/dist/flickity.css';
         }, 500)
 
     });
+
+    /**
+     * Personal area tabs
+     */
+    $('.personal-area-tabs-item-header').on('click', function () {
+        $(this).siblings().slideToggle();
+        $(this).toggleClass('active')
+    })
 
     /**
      * Form product value (Basket)

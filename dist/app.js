@@ -13206,6 +13206,11 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
         });
     }
 
+    $('.reviews-page-content').mCustomScrollbar({
+        axis: "y",
+        setHeight: 520
+    });
+
     $('.cosmetologist-change-city-scrollbar').mCustomScrollbar({
         axis: "y",
         setHeight: 400
@@ -13444,6 +13449,14 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
         setTimeout(function () {
             $('.question-modal').removeClass('modal-active bounceInUp');
         }, 500);
+    });
+
+    /**
+     * Personal area tabs
+     */
+    $('.personal-area-tabs-item-header').on('click', function () {
+        $(this).siblings().slideToggle();
+        $(this).toggleClass('active');
     });
 
     /**
