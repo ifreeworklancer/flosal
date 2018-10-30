@@ -1,0 +1,41 @@
+#video-gallery {
+    padding: 80px 0 20px;
+
+    .breadcrumbs {
+        top: -40px;
+        left: -30px;
+    }
+}
+
+.video-gallery-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-top: 300px;
+    cursor: pointer;
+
+    &-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+
+        svg {
+            fill: #c00;
+            opacity: .6;
+            transition: .5s;
+        }
+
+        &:hover {
+
+            svg {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__img {
+        @extend %pos;
+        @extend %img;
+    }
+}

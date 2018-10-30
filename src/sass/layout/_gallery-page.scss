@@ -1,0 +1,43 @@
+#gallery-page {
+    padding: 85px 0 20px;
+
+    .breadcrumbs {
+        top: -40px;
+        left: -30px;
+    }
+}
+
+.gallery-page-item {
+    position: relative;
+    padding: 50px 35px 760px;
+    overflow: hidden;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding-bottom: 300px;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        position: relative;
+        z-index: 5;
+    }
+
+    &__img {
+        @extend %pos;
+        @extend %img;
+        transform: scale(1);
+        transition: 2s;
+    }
+
+    &__link {
+        @extend %pos;
+        z-index: 6;
+    }
+
+    &:hover {
+        
+        .gallery-page-item__img {
+            transform: scale(1.2);
+        }
+    }
+}

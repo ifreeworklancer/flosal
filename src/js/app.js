@@ -478,6 +478,38 @@ import 'flickity/dist/flickity.css';
 
     });
 
+     /**
+     * Youtube video
+     */
+    $('[data-src]').on('click', function () {
+
+        var id = $(this).data('src'),
+            padding = $(window).width() > 768 ? 120 : 30,
+            ratio = 608 / 1080,
+            width = $(window).width() - padding,
+            height = width * ratio,
+            html = '<iframe style="width: ' + width + 'px; height: ' + height + 'px;" ' +
+            'src="' +
+            id + '" frameborder="0" gesture="media" allowfullscreen></iframe>';
+
+        $('body').append('<div class="outer">' + html + '</div>');
+    });
+
+    $(document).mouseup(function (e) {
+        var container = $('.outer iframe');
+
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            $('.outer').remove();
+        }
+    });
+
+    $(document).on('keyup', function (e) {
+        if (e.keyCode === 27) {
+            $('.outer').remove();
+        }
+    })
+
+
 
 })(jQuery)
 

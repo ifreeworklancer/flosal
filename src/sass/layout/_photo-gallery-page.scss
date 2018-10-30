@@ -1,0 +1,29 @@
+#photo-gallery-page {
+    padding: 85px 0 20px;
+
+    .breadcrumbs {
+        top: -40px;
+        left: -30px;
+    }
+}
+
+.photo-gallery-page-item {
+    position: relative;
+    margin-bottom: 30px;
+
+    &__link {
+        @extend %pos;
+        z-index: 3;
+    }
+    
+    &__img {
+        width: 100%;
+        height: 175px;
+        margin-bottom: 10px;
+        @extend %img;
+    }
+
+    &-description {
+        color: $dark;
+    }
+}

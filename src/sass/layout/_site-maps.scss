@@ -1,0 +1,33 @@
+#site-maps {
+    padding: 85px 0 20px;
+
+    .breadcrumbs {
+        top: -40px;
+        left: -30px;
+    }
+}
+
+.site-maps-item {
+    margin-bottom: 40px;
+
+    &__title {
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: normal;
+        color: $primary;
+    }
+
+    &-list {
+
+        &-cell {
+
+            &__link {
+                display: block;
+                margin-bottom: 15px;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: #74686f;
+            }
+        }
+    }
+}
