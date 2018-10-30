@@ -1,0 +1,41 @@
+.error-page-main {
+
+    #nav-brand {
+        margin-top: -130px;
+    }
+}
+
+#error-page {
+    height: 100vh;
+    @extend %img;
+    overflow: hidden;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        height: auto;
+        padding-top: 120px;
+        min-height: 600px;
+    }
+}
+
+.error-page-item {
+    position: relative;
+    padding: 55px 0;
+    z-index: 5;
+
+    &__title {
+        font-size: 90px;
+    }
+
+    &__description {
+        font-size: 25px;
+    }
+
+    &::before {
+        content: '';
+        @extend %pos;
+        left: -1000px;
+        right: -1000px;
+        background: rgba(#363636, .3);
+        z-index: -3;
+    }
+}

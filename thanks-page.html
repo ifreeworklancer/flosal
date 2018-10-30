@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flosal Thanks</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="dist/app.css">
+</head>
+
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+        <symbol id="avatar-icon" viewBox="0 0 311.541 311.541">
+            <path fill="#d5d5d5" d="M155.771,26.331C69.74,26.331,0,96.071,0,182.102c0,37.488,13.25,71.883,35.314,98.761
+			c3.404-27.256,30.627-50.308,68.8-61.225c13.946,12.994,31.96,20.878,51.656,20.878c19.233,0,36.894-7.487,50.698-19.936
+			c38.503,11.871,65.141,36.27,66.017,64.63c24.284-27.472,39.056-63.555,39.056-103.108
+			C311.541,96.071,241.801,26.331,155.771,26.331z M155.771,222.069c-9.944,0-19.314-2.732-27.634-7.464
+			c-20.05-11.409-33.855-34.756-33.855-61.711c0-38.143,27.583-69.176,61.489-69.176c33.909,0,61.489,31.033,61.489,69.176
+			c0,27.369-14.237,51.004-34.786,62.215C174.379,219.523,165.346,222.069,155.771,222.069z" />
+        </symbol>
+
+        <symbol id="basket-icon" viewBox="0 0 576 512">
+            <path d="M576 216v16c0 13.255-10.745 24-24 24h-8l-26.113 182.788C514.509 462.435 494.257 480 470.37 480H105.63c-23.887 0-44.139-17.565-47.518-41.212L32 256h-8c-13.255 0-24-10.745-24-24v-16c0-13.255 10.745-24 24-24h67.341l106.78-146.821c10.395-14.292 30.407-17.453 44.701-7.058 14.293 10.395 17.453 30.408 7.058 44.701L170.477 192h235.046L326.12 82.821c-10.395-14.292-7.234-34.306 7.059-44.701 14.291-10.395 34.306-7.235 44.701 7.058L484.659 192H552c13.255 0 24 10.745 24 24zM312 392V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm112 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm-224 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24z"></path>
+        </symbol>
+
+        <symbol id="search-icon" viewBox="0 0 488.4 488.4">
+            <path d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6
+			s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2
+			S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7
+			S381.9,104.65,381.9,203.25z" />
+        </symbol>
+
+        <symbol id="user-icon" viewBox="0 0 563.43 563.43">
+            <path d="M280.79,314.559c83.266,0,150.803-67.538,150.803-150.803S364.055,13.415,280.79,13.415S129.987,80.953,129.987,163.756  S197.524,314.559,280.79,314.559z M280.79,52.735c61.061,0,111.021,49.959,111.021,111.021S341.851,274.776,280.79,274.776  s-111.021-49.959-111.021-111.021S219.728,52.735,280.79,52.735z" />
+            <path d="M19.891,550.015h523.648c11.102,0,19.891-8.789,19.891-19.891c0-104.082-84.653-189.198-189.198-189.198H189.198  C85.116,340.926,0,425.579,0,530.124C0,541.226,8.789,550.015,19.891,550.015z M189.198,380.708h185.034  c75.864,0,138.313,56.436,148.028,129.524H41.17C50.884,437.607,113.334,380.708,189.198,380.708z" />
+        </symbol>
+
+        <symbol id="facebook-icon" viewBox="0 0 448 512">
+            <path d="M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"></path>
+        </symbol>
+
+        <symbol id="instagram-icon" viewBox="0 0 448 512">
+            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+        </symbol>
+
+        <symbol id="youtube-icon" viewBox="0 0 576 512">
+            <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+        </symbol>
+
+        <symbol id="telegram-icon" viewBox="0 0 496 512">
+            <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"></path>
+        </symbol>
+
+        <symbol id="arrow-left-icon" viewBox="0 0 31.494 31.494">
+            <path d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554
+	c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587
+	c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z" />
+        </symbol>
+
+        <symbol id="arrow-right-icon" viewBox="0 0 31.494 31.494">
+            <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
+	C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
+	c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z" />
+        </symbol>
+
+        <symbol id="moreInfo-icon" viewBox="0 0 255 255">
+            <polygon points="0,63.75 127.5,191.25 255,63.75" />
+        </symbol>
+
+        <symbol id="compulsory-icon" viewBox="0 0 339.247 339.247">
+            <polygon style="fill:#FFFFFF;" points="205.324,112.328 205.324,105.328 133.923,105.328 133.923,141.384 143.923,141.384 
+            143.923,112.328 	" />
+            <path style="fill:#FFFFFF;" d="M90.972,54.273c2.45,54.265,10.76,145.445,38.375,216.151h10
+            c-27.615-70.706-35.925-161.887-38.375-216.151H90.972z" />
+            <path style="fill:#FFFFFF;" d="M131.822,285.425v28.689c0,3.05,1.355,5.782,3.487,7.648c1.342-4.586,3.582-8.793,6.513-12.418
+            v-23.919H131.822z" />
+            <path style="fill:#FFFFFF;" d="M103.019,25V15H89.977c0.014,5.466,0.104,13.78,0.425,24.273h9.745
+            c-0.118-5.858-0.161-10.684-0.17-14.273H103.019z" />
+            <rect x="118.019" y="15" style="fill:#FFFFFF;" width="14.553" height="10" />
+            <rect x="147.571" y="15" style="fill:#FFFFFF;" width="14.553" height="10" />
+            <rect x="206.677" y="15" style="fill:#FFFFFF;" width="14.552" height="10" />
+            <rect x="177.124" y="15" style="fill:#FFFFFF;" width="14.553" height="10" />
+            <path style="fill:#FFFFFF;" d="M249.272,15h-13.044v10h12.951C249.241,21.038,249.266,17.675,249.272,15z" />
+            <path style="fill:#FFA6BB;" d="M150.293,324.287h38.664c-3.016-7.744-10.533-13.257-19.332-13.257
+            C160.826,311.03,153.309,316.543,150.293,324.287z" />
+            <path style="fill:none;" d="M131.822,314.113c0,3.05,1.355,5.782,3.487,7.648c4.346-14.85,18.08-25.732,34.316-25.732
+            c16.234,0,29.969,10.881,34.314,25.729c2.131-1.866,3.485-4.598,3.485-7.646v-28.689h-75.603V314.113z" />
+            <path style="fill:none;" d="M169.625,311.03c-8.799,0-16.316,5.513-19.332,13.257h38.664
+            C185.941,316.543,178.424,311.03,169.625,311.03z" />
+            <path style="fill:none;" d="M169.625,311.03c-8.799,0-16.316,5.513-19.332,13.257h38.664
+            C185.941,316.543,178.424,311.03,169.625,311.03z" />
+            <path style="fill:none;" d="M131.822,314.113c0,3.05,1.355,5.782,3.487,7.648c4.346-14.85,18.08-25.732,34.316-25.732
+            c16.234,0,29.969,10.881,34.314,25.729c2.131-1.866,3.485-4.598,3.485-7.646v-28.689h-75.603V314.113z" />
+            <path style="fill:none;" d="M90.972,54.273c2.45,54.265,10.76,145.445,38.375,216.151h10H209.9
+            c27.629-70.736,35.934-161.896,38.381-216.151H100.972H90.972z" />
+            <path style="fill:#BA82AA;" d="M100.147,39.273h2.872V25h-3.042C99.985,28.59,100.028,33.416,100.147,39.273z" />
+            <rect x="177.124" y="15" style="fill:none;" width="14.553" height="10" />
+            <rect x="147.571" y="15" style="fill:none;" width="14.553" height="10" />
+            <path style="fill:none;" d="M103.019,39.273V25V15H89.977c0.014,5.466,0.104,13.78,0.425,24.273h9.745H103.019z" />
+            <rect x="118.019" y="15" style="fill:none;" width="14.553" height="10" />
+            <rect x="206.677" y="15" style="fill:none;" width="14.552" height="10" />
+            <path style="fill:none;" d="M90.972,54.273c2.45,54.265,10.76,145.445,38.375,216.151h10H209.9
+            c27.629-70.736,35.934-161.896,38.381-216.151H100.972H90.972z" />
+            <path style="fill:none;" d="M169.625,311.03c-8.799,0-16.316,5.513-19.332,13.257h38.664
+            C185.941,316.543,178.424,311.03,169.625,311.03z" />
+            <path style="fill:none;" d="M236.229,25h12.951c0.062-3.962,0.086-7.325,0.093-10h-13.044V25z" />
+            <path style="fill:none;" d="M131.822,314.113c0,3.05,1.355,5.782,3.487,7.648c4.346-14.85,18.08-25.732,34.316-25.732
+            c16.234,0,29.969,10.881,34.314,25.729c2.131-1.866,3.485-4.598,3.485-7.646v-28.689h-75.603V314.113z" />
+            <rect x="118.019" y="25" style="fill:#BA82AA;" width="14.553" height="14.273" />
+            <rect x="147.571" y="25" style="fill:#BA82AA;" width="14.553" height="14.273" />
+            <rect x="177.124" y="25" style="fill:#BA82AA;" width="14.553" height="14.273" />
+            <rect x="206.677" y="25" style="fill:#BA82AA;" width="14.552" height="14.273" />
+            <path style="fill:#BA82AA;" d="M236.229,39.273h12.621c0.164-5.356,0.267-10.141,0.33-14.273h-12.951V39.273z" />
+            <path style="fill:none;" d="M103.019,39.273V25V15H89.977c0.014,5.466,0.104,13.78,0.425,24.273h9.745H103.019z" />
+            <polygon style="fill:none;" points="162.124,25 162.124,15 147.571,15 147.571,25 147.571,39.273 162.124,39.273 	" />
+            <polygon style="fill:none;" points="221.229,25 221.229,15 206.677,15 206.677,25 206.677,39.273 221.229,39.273 	" />
+            <polygon style="fill:none;" points="191.677,25 191.677,15 177.124,15 177.124,25 177.124,39.273 191.677,39.273 	" />
+            <polygon style="fill:none;" points="132.571,25 132.571,15 118.019,15 118.019,25 118.019,39.273 132.571,39.273 	" />
+            <path style="fill:none;" d="M141.822,285.425h-10v28.689c0,3.05,1.355,5.782,3.487,7.648c1.343-4.586,3.582-8.793,6.513-12.418
+            V285.425z" />
+            <path style="fill:none;" d="M236.229,25v14.273h12.621c0.164-5.356,0.267-10.141,0.33-14.273c0.062-3.962,0.086-7.325,0.093-10
+            h-13.044V25z" />
+            <path style="fill:none;" d="M169.625,311.03c-8.799,0-16.316,5.513-19.332,13.257h38.664
+            C185.941,316.543,178.424,311.03,169.625,311.03z" />
+            <path style="fill:none;" d="M90.972,54.273c2.45,54.265,10.76,145.445,38.375,216.151h10H209.9
+            c27.629-70.736,35.934-161.896,38.381-216.151H100.972H90.972z" />
+            <path style="fill:#FFA6BB;" d="M169.625,296.03c16.234,0,29.969,10.881,34.314,25.729c2.131-1.866,3.485-4.598,3.485-7.646v-28.689
+            h-65.603v23.919C148.38,301.23,158.404,296.03,169.625,296.03z" />
+            <path style="fill:#7F3960;" d="M264.234,7.355C264.154,3.27,260.82,0,256.735,0H82.512c-4.085,0-7.419,3.27-7.499,7.355
+            c-0.008,0.404-0.734,41.143,4.075,94.791c4.418,49.296,14.557,119.915,37.734,177.359v34.608c0,13.404,10.531,24.392,23.755,25.132
+            c0.033,0.003,58.062,0.003,58.098-0.001c13.222-0.741,23.75-11.728,23.75-25.131v-34.608
+            c23.178-57.444,33.316-128.063,37.734-177.359C264.969,48.498,264.242,7.759,264.234,7.355z M206.677,25V15h14.552v10v14.273
+            h-14.552V25z M177.124,25V15h14.553v10v14.273h-14.553V25z M147.571,25V15h14.553v10v14.273h-14.553V25z M118.019,25V15h14.553v10
+            v14.273h-14.553V25z M89.977,15h13.042v10v14.273h-2.872h-9.745C90.08,28.78,89.99,20.466,89.977,15z M135.31,321.762
+            c-2.132-1.866-3.487-4.599-3.487-7.648v-28.689h10h65.603v28.689c0,3.049-1.354,5.78-3.485,7.646
+            c-4.346-14.849-18.08-25.729-34.314-25.729c-11.221,0-21.245,5.2-27.803,13.314C138.892,312.969,136.652,317.175,135.31,321.762z
+             M150.293,324.287c3.016-7.744,10.533-13.257,19.332-13.257c8.799,0,16.316,5.513,19.332,13.257H150.293z M209.9,270.425h-70.554
+            h-10c-27.615-70.706-35.925-161.887-38.375-216.151h10h147.309C245.834,108.528,237.529,199.689,209.9,270.425z M249.18,25
+            c-0.063,4.132-0.166,8.917-0.33,14.273h-12.621V25V15h13.044C249.266,17.675,249.241,21.038,249.18,25z" />
+            <path style="fill:#BA82AA;" d="M100.972,54.273c2.45,54.265,10.76,145.445,38.375,216.151H209.9
+            c27.629-70.736,35.934-161.896,38.381-216.151H100.972z M212.824,156.384h-86.401c-4.143,0-7.5-3.357-7.5-7.5V97.828
+            c0-4.142,3.357-7.5,7.5-7.5h86.401c4.143,0,7.5,3.358,7.5,7.5v51.056C220.324,153.026,216.967,156.384,212.824,156.384z" />
+            <rect x="143.923" y="112.328" style="fill:#FFA6BB;" width="61.401" height="29.056" />
+            <path style="fill:#7F3960;" d="M212.824,90.328h-86.401c-4.143,0-7.5,3.358-7.5,7.5v51.056c0,4.143,3.357,7.5,7.5,7.5h86.401
+            c4.143,0,7.5-3.357,7.5-7.5V97.828C220.324,93.687,216.967,90.328,212.824,90.328z M133.923,105.328h71.401v7v29.056h-61.401h-10
+            V105.328z" />
+        </symbol>
+
+        <symbol id="success-icon" viewBox="0 0 512 512">
+            <path fill="#5e193f" d="M466.27 286.69C475.04 271.84 480 256 480 236.85c0-44.015-37.218-85.58-85.82-85.58H357.7c4.92-12.81 8.85-28.13 8.85-46.54C366.55 31.936 328.86 0 271.28 0c-61.607 0-58.093 94.933-71.76 108.6-22.747 22.747-49.615 66.447-68.76 83.4H32c-17.673 0-32 14.327-32 32v240c0 17.673 14.327 32 32 32h64c14.893 0 27.408-10.174 30.978-23.95 44.509 1.001 75.06 39.94 177.802 39.94 7.22 0 15.22.01 22.22.01 77.117 0 111.986-39.423 112.94-95.33 13.319-18.425 20.299-43.122 17.34-66.99 9.854-18.452 13.664-40.343 8.99-62.99zm-61.75 53.83c12.56 21.13 1.26 49.41-13.94 57.57 7.7 48.78-17.608 65.9-53.12 65.9h-37.82c-71.639 0-118.029-37.82-171.64-37.82V240h10.92c28.36 0 67.98-70.89 94.54-97.46 28.36-28.36 18.91-75.63 37.82-94.54 47.27 0 47.27 32.98 47.27 56.73 0 39.17-28.36 56.72-28.36 94.54h103.99c21.11 0 37.73 18.91 37.82 37.82.09 18.9-12.82 37.81-22.27 37.81 13.489 14.555 16.371 45.236-5.21 65.62zM88 432c0 13.255-10.745 24-24 24s-24-10.745-24-24 10.745-24 24-24 24 10.745 24 24z"></path>
+        </symbol>
+
+        <symbol id="wrong-icon" viewBox="0 0 490.667 490.667">
+            <path d="M416,0H74.667C33.493,0,0,33.493,0,74.667v234.667C0,350.507,33.493,384,74.667,384h230.251l103.552,103.552    c2.027,2.027,4.757,3.115,7.531,3.115c1.365,0,2.773-0.256,4.075-0.811c3.989-1.643,6.592-5.547,6.592-9.856v-96.768    c36.139-5.184,64-36.352,64-73.899V74.667C490.667,33.493,457.173,0,416,0z M245.333,320c-17.643,0-32-14.357-32-32    s14.357-32,32-32c17.643,0,32,14.357,32,32S262.976,320,245.333,320z M287.915,98.304l-9.195,105.429    c-1.216,17.259-15.915,30.933-33.387,30.933c-17.664,0-32.341-13.675-33.557-31.125l-9.003-105.109    c-0.64-8.96,2.432-17.749,8.448-24.213C217.28,67.712,225.813,64,234.667,64H256c8.853,0,17.387,3.712,23.445,10.219    C285.461,80.704,288.555,89.472,287.915,98.304z"
+                fill="#e51c1c" />
+        </symbol>
+
+        <symbol id="file-icon" viewBox="0 0 384 512">
+            <path fill="#5e193f" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path>
+        </symbol>
+
+
+    </svg>
+
+    <!-- Header  Main-->
+    <header id="app-header" class="app-header app-header--main">
+        <div class="container-fluid px-0 d-flex flex-column flex-lg-row justify-content-between align-items-center">
+            <div class="header-item d-flex justify-content-start align-items-center">
+                <div class="burger-menu d-flex flex-column justify-content-center align-items-center position-relative">
+                    <div class="line-big line-big--top">
+                        <div class="line-small line-small--top"></div>
+                        <div class="line-small line-small--bottom"></div>
+                    </div>
+                    <div class="line-big line-big--bottom">
+                        <div class="line-small line-small--top"></div>
+                        <div class="line-small line-small--bottom"></div>
+                    </div>
+                </div>
+                <!-- Add subitems of the (About as) О нас menu to all pages (gallery[галеря], reviews[отзывы] and site maps[карта сайта]) -->
+                <div class="menu-nav position-absolute">
+                    <ul class="menu-nav-list list-unstyled">
+                        <li class="menu-nav-list-item"><span class="menu-nav-list-item__text">о нас</span>
+                            <ul class="menu-nav-list-item-menu list-unstyled pl-4">
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">о
+                                        компании
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">статьи</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">новости</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">лица
+                                        flosal
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">эксперты
+                                        flosal
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">путешествия
+                                        flosal
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">социальная
+                                        инициатива
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-nav-list-item"><span class="menu-nav-list-item__text">учебный центр</span>
+                            <ul class="menu-nav-list-item-menu list-unstyled pl-4">
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ОБУЧЕНИЕ
+                                        ОТ FLOSAL
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">РАСПИСАНИЕ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">НАШИ
+                                        ТРЕНЕРЫ
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ОБУЧАЮЩЕЕ
+                                        ВИДЕО
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-nav-list-item"><span class="menu-nav-list-item__text">методики</span>
+                            <ul class="menu-nav-list-item-menu list-unstyled pl-4">
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">МЕЗОТЕРАПИЯ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ТРИХОЛОГИЯ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">БИОРЕВИТАЛИЗАЦИЯ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ИНЪЕКЦИОННО-КОНТУРНАЯ
+                                        ПЛАСТИКА
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">РЕВИТАЛИЗАЦИЯ
+                                        AQUASHINE
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-nav-list-item"><span class="menu-nav-list-item__text">ИНЬЕКЦИОННЫЕ ПРЕПАРАТЫ</span>
+                            <ul class="menu-nav-list-item-menu list-unstyled pl-4">
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ИНЪЕКЦИОННЫЕ
+                                        МЕЗОТЕРАПЕВТИЧЕСКИЕ КОКТЕЙЛИ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">РЕВИТАЛИЗАНТЫ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ФИЛЛЕРЫ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">PROSTROLANE</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">AQUASHINE</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">REVOFIL</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">IDUNE</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">DERMAFILL</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">DERMAHEAL</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">DR.CYJ</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-nav-list-item"><span class="menu-nav-list-item__text">УХОДОВАЯ КОСМЕТИКА</span>
+                            <ul class="menu-nav-list-item-menu list-unstyled pl-4">
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">УХОД
+                                        ЗА КОЖЕЙ ЛИЦА</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">КРЕМЫ
+                                        ДЛЯ ЛИЦА</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">СЫВОРОТКИ
+                                        ДЛЯ ЛИЦА</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">МАСКИ
+                                        ДЛЯ ЛИЦА</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">УХОД
+                                        ЗА КОЖЕЙ ВОКРУГ ГЛАЗ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">КРЕМЫ
+                                        ДЛЯ КОЖИ ВОКРУГ ГЛАЗ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">СЫВОРОТКИ
+                                        ДЛЯ КОЖИ ВОКРУГ ГЛАЗ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">МАСКИ
+                                        ДЛЯ КОЖИ ВОКРУГ ГЛАЗ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">УХОД
+                                        ЗА ВОЛОСАМИ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">НЕЖЕЛАТЕЛЬНЫЙ
+                                        РОСТ ВОЛОС</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">УХОД
+                                        ЗА ТЕЛОМ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ВНУТРЕННЯЯ
+                                        БИОРЕВИТАЛИЗАЦИЯ
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">АНТИВОЗРАСТНЫЕ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">УВЛАЖНЕНИЕ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">
+                                        ПИТАНИЕ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ОСВЕТЛЕНИЕ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">
+                                        ДЛЯ ВСЕХ ТИПОВ КОЖИ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ДЛЯ
+                                        СУХОЙ КОЖИ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ДЛЯ
+                                        ЖИРНОЙ И ПРОБЛЕМНОЙ КОЖИ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ПРОТИВ
+                                        ПИГМЕНТНЫХ ПЯТЕН</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ЗАЩИТА
+                                        ОТ СОЛНЦА</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-nav-list-item"><span class="menu-nav-list-item__text">пациентам</span>
+                            <ul class="menu-nav-list-item-menu list-unstyled pl-4">
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ВОЗРАСТНАЯ
+                                        КОЖА НЕ СКЛОННАЯ К ЧУВСТВИТЕЛЬНОСТИ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">
+                                        ВОЗРАСТНАЯ КОЖА СКЛОННАЯ К ЧУВСТВИТЕЛЬНОСТИ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ВОЗРАСТНАЯ
+                                        КОЖА/ ЛОКАЛЬНЫЕ ЖИРОВЫЕ ОТЛОЖЕНИЯ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">КУПЕРОЗ/СУХАЯ
+                                        КОЖА flosal
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ПЕРИОРБИТАЛЬНАЯ
+                                        ОБЛАСТЬ/МОРЩИНЫ
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ПРОБЛЕМНАЯ
+                                        КОЖА/ВЫСЫПАНИЯ/РУБЦЫ/ПОСТАКНЕ
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ПЕРИОРБИТАЛЬНАЯ
+                                        ОБЛАСТЬ/ОТЕЧНОСТЬ/ГРЫЖИ
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ПИГМЕНТАЦИЯ
+                                        НА ЛИЦЕ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">СУХАЯ
+                                        КОЖА
+                                    </a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">ПЕРИОРБИТАЛЬНАЯ
+                                        ОБЛАСТЬ/ ТЕМНЫЕ КРУГИ/ ПИГМЕНТАЦИЯ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">АЛОПЕЦИЯ
+                                        - ПОТЕРЯ ВОЛОС</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-nav-list-item"><span class="menu-nav-list-item__text">ПРОЙТИ ПРОЦЕДУРУ</span>
+                            <ul class="menu-nav-list-item-menu list-unstyled pl-4">
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">КОСМЕТОЛОГИ</a></li>
+                                <li class="menu-nav-list-item-menu-item"><a href="#" class="menu-nav-list-item-menu-item__link">КЛИНИКИ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo position-relative">
+                    <a href="index.html"><img class="logo-icon logo-icon--white position-absolute" src="images/icon/logo/logo-white.png"
+                            alt="Flosal Logo"></a>
+                    <a href="index.html"><img class="logo-icon logo-icon--primary position-absolute" src="images/icon/logo/logo-primary.png"
+                            alt="Flosal Logo"></a>
+                </div>
+                <div class="search d-flex align-items-center">
+                    <form action="#" id="search-form">
+                        <input id="search-control" class="form-control position-relative" placeholder="поиск..."
+                            aria-label="поиск..." type="search">
+                        <button class="search-btn position-absolute p-0 m-0" type="submit">
+                            <svg width="25" height="25">
+                                <use xlink:href="#search-icon"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="header-item d-none d-lg-flex justify-content-end align-items-center">
+                <ul class="social-list list-unstyled d-inline-flex">
+                    <li class="social-list-item social-list-item--link mr-2">
+                        <a href="#">войти</a>
+                    </li>
+                    <li class="social-list-item social-list-item--white social-list-item--user mr-3">
+                        <a href="#">
+                            <svg width="25" height="25">
+                                <use xlink:href="#user-icon"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li id="basket-open-btn" class="social-list-item social-list-item--white social-list-item--user mr-3">
+                        <span class="basket-product-value">2</span>
+                        <a href="#">
+                            <svg width="25" height="25">
+                                <use xlink:href="#basket-icon"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-list-item social-list-item--white social-list-item--facebook mr-3">
+                        <a href="#">
+                            <svg width="25" height="25">
+                                <use xlink:href="#facebook-icon"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-list-item social-list-item--white social-list-item--instagram mr-3">
+                        <a href="#">
+                            <svg width="25" height="25">
+                                <use xlink:href="#instagram-icon"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-list-item social-list-item--white social-list-item--youtube mr-3">
+                        <a href="#">
+                            <svg width="25" height="25">
+                                <use xlink:href="#youtube-icon"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-list-item social-list-item--white social-list-item--telegram">
+                        <a href="#">
+                            <svg width="25" height="25">
+                                <use xlink:href="#telegram-icon"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="phone-list text-center list-unstyled m-0 d-flex flex-column justify-content-center align-items-center">
+                    <li class="phone-list-item mb-2"><a href="tel:+380800300850" class="phone-list-item__link text-white">0-800-300-850</a></li>
+                    <li class="phone-list-item"><a href="tel:+380676221709" class="phone-list-item__link text-white">+380-67-622-17-09</a></li>
+                </ul>
+            </div>
+            <div class="basket-modal text-dark position-absolute">
+                <div class="basket-modal-header">
+                    <h4 class="basket-modal-header__title text-uppercase mb-4">товар добавлен в корзину</h4>
+                </div>
+                <div class="basket-modal-body">
+                    <div class="basket-modal-body-product-card d-flex">
+                        <div class="basket-modal-body-product-card__img" style="background-image: url('images/content/catalog/catalog-item-3.jpg');"></div>
+                        <div class="basket-modal-body-product-card-description ml-5">
+                            <div class="basket-modal-body-product-card-description__title">
+                                <span class="font-weight-normal">Ревитализирующий крем</span>
+                                <span class="font-weight-bold">DERMAHEAL VITALIZING CREAM</span>
+                                40 мл
+                            </div>
+                            <div class="basket-modal-body-product-card-description__price">
+                                <span class="font-weight-bold">900</span>
+                                <span class="font-weight-normal">грн</span>
+                            </div>
+                            <form action="#" id="form-product-value">
+                                <div class="quantity">
+                                    <input type="number" min="1" step="1" value="1" id="product-value">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-modal-footer">
+                    <div class="basket-modal-footer-result d-flex justify-content-between align-items-center">
+                        <div class="basket-modal-footer-result-item d-flex align-items-center">
+                            <div class="basket-modal-footer-result-item__text text-uppercase">Итого:</div>
+                            <div class="basket-modal-footer-result-item-value ml-1 ml-md-2 font-weight-normal">
+                                <span class="font-weight-bold">900</span>
+                                грн
+                            </div>
+                        </div>
+                        <div class="basket-modal-footer-result-item">
+                            <a href="#" class="btn btn-primary basket-modal-footer-result-item-btn">Оформить
+                                заказ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-modal-nav position-absolute">
+                    <div class="basket-modal-nav-close">
+                        <div class="line line--left"></div>
+                        <div class="line line--right"></div>
+                    </div>
+                    <div class="basket-modal-nav-onpage">
+                        <div class="basket-modal-nav-onpage-text text-uppercase">
+                            В корзину
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="thanks-page-main">
+
+        <!-- Thanks Page -->
+        <section id="thanks-page" style="background-image: url('images/bg/thanks-page-bg.jpg');">
+            <div class="container h-100 position-relative">
+                <div class="row h-100 align-items-center">
+                    <div class="col-sm-6 col-lg-4 mx-auto text-center">
+                        <div class="thanks-page-item">
+                            <h1 class="thanks-page-item__title text-uppercase">Спасибо!</h1>
+                            <h2 class="thanks-page-item__description text-uppercase mb-4">мы с вами свяжемся</h2>
+                            <a href="#" class="btn btn-primary">на главную</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nav brand -->
+        <section id="nav-brand">
+            <div class="container-fluid">
+                <ul class="nav-brand-list list-unstyled d-none d-lg-flex justify-content-center position-relative p-0 my-0 mx-auto">
+                    <li class="nav-brand-list-item"><a href="#" class="nav-brand-list-item__link"><img src="images/icon/brand/brand-item-1.png"
+                                alt=""></a></li>
+                    <li class="nav-brand-list-item"><a href="#" class="nav-brand-list-item__link"><img src="images/icon/brand/brand-item-2.png"
+                                alt=""></a></li>
+                    <li class="nav-brand-list-item"><a href="#" class="nav-brand-list-item__link"><img src="images/icon/brand/brand-item-3.png"
+                                alt=""></a></li>
+                    <li class="nav-brand-list-item"><a href="#" class="nav-brand-list-item__link"><img src="images/icon/brand/brand-item-4.png"
+                                alt=""></a></li>
+                    <li class="nav-brand-list-item"><a href="#" class="nav-brand-list-item__link"><img src="images/icon/brand/brand-item-5.png"
+                                alt=""></a></li>
+                    <li class="nav-brand-list-item"><a href="#" class="nav-brand-list-item__link"><img src="images/icon/brand/brand-item-6.png"
+                                alt=""></a></li>
+                    <li class="nav-brand-list-item"><a href="#" class="nav-brand-list-item__link"><img src="images/icon/brand/brand-item-7.png"
+                                alt=""></a></li>
+                    <li class="nav-brand-list-item"><a href="#" class="nav-brand-list-item__link"><img src="images/icon/brand/brand-item-8.png"
+                                alt=""></a></li>
+                    <li class="nav-brand-list-item"><a href="#" class="nav-brand-list-item__link"><img src="images/icon/brand/brand-item-9.png"
+                                alt=""></a></li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Script -->
+    <script src="dist/app.js"></script>
+</body>
+
+</html>
